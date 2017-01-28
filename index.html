@@ -1,63 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  html, body{
-   margin:0px;
-   padding:0px;
-   background:#1d1d1d;
-   font-family: 'Roboto', sans-serif;
-}
-body *{
-   box-sizing:border-box;
-}
-body{
-   max-width:900px;
-   margin:auto;
-   background:#cdcdcd;
-   padding:40px;
-   margin-top:20px;
-}
-.jumbotron{
-   margin-top:10px;
-   border-bottom:10px solid #141414;
-   margin-bottom:40px;
-}
-.jumbotron h1{
-   margin:20px 0px;;
-   font-size:128px;
-   font-family: 'Overpass Mono', monospace;
- 
-}
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Sean Codes</title>
+  <meta name="description" content="Site about Sean Mann a software developer in chicago">
+  <meta name="author" content="Sean Mann">
 
-.jumbotron div{
-   border-left:4px solid #141414;
-   padding-left:10px;
-   font-size:18px;
-   font-style:italic;
-}
-.about-img{
-   float:left;
-   padding:0px 10px 0px 0px;
-}
-.about-img img{
-   box-shadow: 0px 3px 3px rgba(0,0,0,0.6);
-}
-</style>
-  </head>
-  </body>
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div class="jumbotron">
-   <h1>Sean Codes</h1>
-   <div>A software developer in chicago</div>
-</div>
-<h1>About</h1>
-<div class="about-img"><img src="https://instagram.ford1-1.fna.fbcdn.net/t51.2885-19/s150x150/15803099_951540678280082_8208584870989922304_a.jpg"></div>
-<p class="about">
-Hi! I'm a high energy web software developer. I specialize in hand crafted vanilla JavaScript 2D Games and Apps. I started out writing software through game development. I spent every night for over 3 years self teaching myself how to use code to develop scalable network applications. From there my first game/project was an infinite scaling MMORPG that I wrote while livestreaming the development process. That project started from a 14 page development documentation I wrote and stuck to through the 50,000 lines of code the project reached. Since then I have worked on countless projects rangeing to higher end 2D game development to Android and IOS web applications for eCommerce. I live for the challenge of programming and will not stop until I master it to the best of my ability.
-</p>
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container" style="margin-top:75px; margin-bottom:75px;">
+    <div class="row">
+        <div class="one-third column">
+            <img class="card-2" src='images/me.jpg'/>
+        </div>
+        <div class="two-thirds column">
+          <h4>Sean Codes</h4>
+          <p>Hi! I'm a software developer in Chicago specializing in Web Development, Network programming, and 2D Games.</p>
+        </div>
+    </div>
+    <div>
+        <h4>Story</h4>
+        <p>I started out programming 2D games in Game Maker 6. I had a goal to write the first stable MMORPG using the Game Maker toolset. I wrote a 14 page game design document that I stuck to while developing over 50,000 lines of code on a live stream with viewers hacking, overloading and botting in real time. Since then I began working with HTML5 and Javascript to work on countless other projects. I have written web apps for eCommerce and restaurants to one of the fastest web sockets engines in node.js. I enjoy the challenge of real time network programming. </p>
+    </div>
+    <div>
+        <h4>Projects</h4>
+        <p>A few projects I am currently working on</p>
+        <div class="row">
+            <div class="one-third column">
+                <div class="card">
+                    <img src='images/project1.png'/>
+                    <h5>cs-sockets</h5>
+                    <p>A text based networking server for snappy websocketing in Node.js</p>
+                </div>
+            </div>
+            <div class="one-third column">
+                <div class="card">
+                    <img src='images/project2.png'/>
+                    <h5>cube warrior</h5>
+                    <p>Version 2 of my MMORPG with a new take on global game networking</p>
+                </div>
+            </div>
+            <div class="one-third column">
+                <div class="card">
+                    <img src='images/project3.png'/>
+                    <h5>cs-engine</h5>
+                    <p>A mobile first responsive game development engine for 2D games</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h4>My method</h4>
+        <div class="row">
+            <div class="one-third column">
+                <div class="card">
+                    <img src='images/plan1.jpg'/>
+                    <h5>Plan</h5>
+                    <p>Going into any project requires a complete outline. This gives a solid fondation to work on.</p>
+                </div>
+            </div>
+            <div class="one-third column">
+                <div class="card">
+                    <img src='images/plan2.jpg'/>
+                    <h5>Code</h5>
+                    <p>I usually write the view and how I want my code to function first. Then the core underneath.</p>
+                </div>
+            </div>
+            <div class="one-third column">
+                <div class="card">
+                    <img src='images/plan3.jpg'/>
+                    <h5>Learn</h5>
+                    <p>Note info taken from the project. The plan was missing parts. A new way to structure your code.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
-
-
-
