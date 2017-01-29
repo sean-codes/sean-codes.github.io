@@ -20,12 +20,6 @@ img{
     border-bottom:1px solid #cdcdcd;
 }
 
-.card p{
-   ccheight:4.5rem;
-}
-nav{
-
-}
 nav .button{
     float:right;
     margin-right:10px;
@@ -39,12 +33,23 @@ nav.fixedHeader{
     background:white;
     width: 100%;
     position: relative;
-    padding-top:300px;
-    margin-bottom:-300px;
+    padding-top:1000px;
+    margin-bottom:-1000px;
     border: 1px solid #cdc;
     border-top:none;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
 #banner{
     padding-top:25px;
+}
+
+.question{
+    border:1px solid #E1E1E1;
+    border-radius: 4px;
+    padding:10px 10px 0px 10px;
+    margin-top:10px;
+}
+
+.question h5{
+    border-bottom:1px solid #e1e1e1;
 }
