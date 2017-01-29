@@ -8,7 +8,6 @@ navFix = function(){
     var bannerHeight = banner.offsetHeight;
 
     var distanceFromTop = bannerHeight - scrollY;
-    console.log(distanceFromTop);
 
     if(distanceFromTop < 20){
         nav.style.top = ((0 - distanceFromTop) - 300) + 'px';
@@ -17,9 +16,4 @@ navFix = function(){
     } else {
         nav.classList.remove('fixedHeader')
     }
-}
-
-returnHeight = function(ele){
-    //return ele.getBoundingClientRect().top;
-    return ele.offsetHeight;
 }
