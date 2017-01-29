@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Sean Codes</title>
+  <meta name="description" content="Site about Sean Mann a software developer in chicago">
+  <meta name="author" content="Sean Mann">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/skeleton.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container" style="margin-bottom:75px;">
+    <div class="row" id="banner">
+        <div class="one-third column">
+            <img class="shadow" src='../images/me.jpg'/>
+        </div>
+        <div class="two-thirds column">
+            <h4>Sean Codes
+                <a href="https://www.instagram.com/sean_codes/?ref=badge" class="ig-b- ig-b-32">
+                    <img src="//badges.instagram.com/static/images/ig-badge-32.png" alt="Instagram" />
+                </a>
+            </h4>
+          <p>Hi! I'm a software developer in Chicago specializing in Web Development, Network programming, and 2D Game development.</p>
+        </div>
+    </div>
+    <nav class="button-group u-pull-right">
+        <a class="button" href="../answers">Answers</a>
+        <a class="button" href="..">About</a>
+    </nav>
+    <hr style="clear:both">
+
+    <div>
+        <h4>Contact</h4>
+        <p>I'm excited to hlep you with what your working on! Please feel free to contact me about:</p>
+        <ul>
+            <li>Questions you have or help with projects</li>
+            <li>Professional freelancing work</li>
+            <li>You're in Chicago over the weekend and want to party or ride bikes</li>
+        </ul>
+        <form onsubmit="return false;" method="POST" id="formContact">
+            <div class="row">
+                <div class="six columns">
+                    <label for="exampleEmailInput">Your email or social media</label>
+                    <input class="u-full-width" type="text" placeholder="test@mailbox.com" id="email">
+                </div>
+                <div class="six columns">
+                    <label for="exampleRecipientInput">Reason for contacting</label>
+                    <select class="u-full-width" id="reason">
+                        <option>Questions</option>
+                        <option>Freelancing</option>
+                        <option>Ride Bikes</option>
+                    </select>
+                </div>
+            </div>
+            <label for="exampleMessage">Message</label>
+            <textarea class="u-full-width" placeholder="Hi Sean! …" id="message"></textarea>
+            <input class="button-primary" type="submit" value="Submit" onclick="contact()">
+        </form>
+        <div id="formSent" class="notify" style="display:none">
+            Thanks for getting in contact! Your message has been sent!
+        </div>
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="../js/javascript.js"></script>
+</body>
+</html>
