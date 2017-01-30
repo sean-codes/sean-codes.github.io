@@ -68,6 +68,10 @@ nav.fixedHeader{
 .badge:hover{
     color:white;
 }
+.badge img{
+    width:32px;
+    height:32px;
+}
 .badge:hover img{
     opacity:0.85;
 }
