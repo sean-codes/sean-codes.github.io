@@ -75,3 +75,8 @@ nav.fixedHeader{
 .badge:hover img{
     opacity:0.85;
 }
+
+
+.footer{
+    margin: 45px 0px;
+}
