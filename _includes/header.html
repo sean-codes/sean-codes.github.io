@@ -1,0 +1,38 @@
+<header class="site-header container" role="banner">
+    <div class="row" id="banner">
+        <div class="one-third column">
+            <img class="shadow" src='{{ "/assets/images/me.jpg" | relative_url }}' />
+        </div>
+        <div class="two-thirds column">
+            <h4>
+                <a href="https://www.instagram.com/sean_codes" target="_blank" class="badge">
+                    <img src="{{ "/assets/images/instagram.png" | relative_url }}" alt="Instagram" />
+                </a>
+                <a href="https://www.github.com/sean-codes" target="_blank" class="badge">
+                    <img src="{{ "/assets/images/github.png" | relative_url }}" alt="Github Profile" />
+                </a>
+                <a href="https://codepen.io/sean_codes/" target="_blank" class="badge">
+                    <img src="{{ "/assets/images/codepen.png" | relative_url }}" alt="Codepen Profile" />
+                </a>
+                <a href="https://www.youtube.com/watch?v=P9AiPgaGHQE" target="_blank" class="badge">
+                    <img src="{{ "/assets/images/youtube.png" | relative_url }}" alt="YouTube Profile" />
+                </a>
+                Sean Codes
+            </h4>
+            <p>{{ site.description | escape}}</p>
+        </div>
+    </div>
+    <nav class="navbar u-pull-right">
+        <ul class="navbar-list">
+            <li class="navbar-item">
+                <a class="navbar-link {% if page.url == "/" %}current{% endif %}" href="{{"/" | relative_url}}">Story</a>
+            </li>
+            <li class="navbar-item">
+                <a class="navbar-link {% if page.url == "/answers/" %}current{% endif %}" href="{{"answers" | relative_url}}">Answers</a>
+            </li>
+            <li class="navbar-item">
+                <a class="navbar-link primary {% if page.url == "/contact/" %}current{% endif %}" href="{{"contact" | relative_url}}">Contact</a>
+            </li>
+        </ul>
+    </nav>
+</header>

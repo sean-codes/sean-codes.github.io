@@ -1,0 +1,15 @@
+<footer class="site-footer container">
+  <div class="footer">
+      © 2017 <a href="mailto:{{ site.email }}">{{ site.myname }}</a> Profiles:
+      {% if site.github_username %}
+        <a href="https://github.com/{{site.github_username}}">Github</a>
+      {% endif %}
+      {% if site.instagram_username %}
+        <a href="https://instagram.com/{{site.instagram_username}}">Instagram</a>
+      {% endif %}
+      {% if site.github_username %}
+        <a href="https://codepen.com/{{site.codepen_username}}">Codepen</a>
+      {% endif %}
+  </div>
+</footer>
+<script src="/assets/script.js"></script>

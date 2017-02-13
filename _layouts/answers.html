@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<div class="container">
+  {{ content }}
+  <div class="row">
+      <input type="text" id="search" onkeyup="search()" class="u-full-width" placeholder="Search for a question">
+  </div>
+    {% for answer in site.posts %}
+        <div class="question">
+            <h5 class="questionText"><a class="post-link" href="{{ answer.url | relative_url }}">{{answer.title}}</a></h5>
+            <p class="questionAnswer"><a href="https://instagram.com/{{question.from}}">@{{answer.from}}</a>: {{answer.excerpt}}</p>
+        </div>
+    {% endfor %}
+</div>
