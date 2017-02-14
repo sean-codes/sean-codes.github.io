@@ -1,7 +1,7 @@
 ---
 layout: post
 tags: [codepen, material, frontend, animation]
-from: awd
+from:
 title: Codepen Floating Action Button
 type: codepen
 ---
