@@ -35,4 +35,13 @@
             </li>
         </ul>
     </nav>
+    <!-- Reset Posts -->
+    {% if page.url == "/" %}
+    <div class="recent-posts">
+        <b>NEW:</b>
+        {% for answer in site.posts limit:3 %}
+        <h6><a class="post-link" href="{{ answer.url | relative_url }}"><b>{{answer.type | capitalize }}</b>: {{answer.title}}</a></h6>
+        {% endfor %}
+    </div>
+    {% endif %}
 </header>

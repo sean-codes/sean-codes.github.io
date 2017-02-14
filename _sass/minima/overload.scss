@@ -125,3 +125,22 @@ img{
     margin-top:1rem;
     margin-bottom:1rem;
 }
+
+.recent-posts{
+    color:white;
+    border:1px solid #999; border-radius:4px; padding:10px 20px; margin-top:10px; background:#c11943; clear:both; margin-bottom:25px;
+}
+.recent-posts h6{
+    margin:10px 0px;
+}
+.recent-posts a{
+    color:white;
+}
+.recent-posts a:hover{
+    color:white;
+    text-decoration:underline;
+}
+
+.cp_embed_wrapper{
+    margin:20px 0px;
+}
