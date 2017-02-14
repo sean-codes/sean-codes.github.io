@@ -16,19 +16,21 @@
 title: Sean Codes
 email: sean_codes@outlook.com
 myname: Sean Mann
-description: > # this means to ignore newlines until "baseurl:"
+description: > #
   Hi! I'm a software developer in Chicago specializing in Web Development, Network programming, and 2D Game development.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://sean-codes.github.io"
 codepen_username: sean-codes
 github_username:  sean-codes
 instagram_username: sean_codes
+permalink: /:categories/:year/:month/:day/:title
 # Build settings
 markdown: kramdown
 collections:
   - answers
 gems:
   - jekyll-feed
+  - jekyll-sitemap
 exclude:
   - Gemfile
   - Gemfile.lock
