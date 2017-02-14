@@ -3,7 +3,7 @@ layout: post
 tags: [codepen, material, frontend, animation]
 from:
 title: Codepen Floating Action Button
-type: codepen
+type: Codepen Daily 
 ---
 This is a pen for a floating action button using CSS. This could be done using the checkbox trick but I felt using JavaScript will make it flow better because the action button already required a bunch of CSS.
 
