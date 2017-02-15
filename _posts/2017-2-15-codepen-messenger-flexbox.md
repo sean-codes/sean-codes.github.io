@@ -1,24 +1,23 @@
 ---
 layout: post
-from: 
+from:
 tags: [codepen, material, flexbox, jquery, frontend, animation]
 title: A Messenger template with flexbox
-type: Codepen Daily 
+type: Codepen Daily
 ---
-This is a simple messenger template that uses vertical and horizontal flexbox!
-Some notes:
 
+This is a simple messenger template that uses vertical and horizontal flexbox! These are some notes I took from the project.
 
-# Make an element centered 
+# Make an element centered
 
     /* the .parent can be body! */
     .parent{ display: flex; }
     .child {flex: 1; margin: auto; }
-    
+
 # Vertical flexbox
 
     .parent{ display: flex; flex-direction: column; }
-    
+
 # Fluid design element with fixed width of 100px
 
     .parent{ display: flex; }

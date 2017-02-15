@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Are you a programmer? How old are you?</title>
-  <meta name="description" content="Hi! Yes and I’m 23 :]">
+  <title>A Messenger template with flexbox</title>
+  <meta name="description" content="This is a simple messenger template that uses vertical and horizontal flexbox! These are some notes I took from the project.">
 
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/2017/02/13/are-you-a-programmer-how-old">
+  <link rel="canonical" href="http://localhost:4000/2017/02/15/codepen-messenger-flexbox">
   <link rel="alternate" type="application/rss+xml" title="Sean Codes" href="/feed.xml">
   <link rel="shortcut icon" type="image/png" href="/assets/favicon.png" >
 
@@ -78,11 +78,38 @@
         <article class="post container question" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title questionText" itemprop="name headline">Are you a programmer? How old are you?</h1>
+    <h1 class="post-title questionText" itemprop="name headline">A Messenger template with flexbox</h1>
   </header>
   <hr>
   <p class="post-content" itemprop="articleBody">
-    <p>Hi! Yes and I’m 23 :]</p>
+    <p>This is a simple messenger template that uses vertical and horizontal flexbox! These are some notes I took from the project.</p>
+
+<h1 id="make-an-element-centered">Make an element centered</h1>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/* the .parent can be body! */
+.parent{ display: flex; }
+.child {flex: 1; margin: auto; }
+</code></pre>
+</div>
+
+<h1 id="vertical-flexbox">Vertical flexbox</h1>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.parent{ display: flex; flex-direction: column; }
+</code></pre>
+</div>
+
+<h1 id="fluid-design-element-with-fixed-width-of-100px">Fluid design element with fixed width of 100px</h1>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.parent{ display: flex; }
+.elementFixedWidth { width: 100px; }
+.elementFluid{ flex: 1; }
+</code></pre>
+</div>
+
+<p data-height="550" data-theme-id="0" data-slug-hash="xgMNxe" data-default-tab="css,result" data-user="sean_codes" data-embed-version="2" data-pen-title="Front End Day 26 - A Chat Template" class="codepen">See the Pen <a href="http://codepen.io/sean_codes/pen/xgMNxe/">Front End Day 26 - A Chat Template</a> by Sean Codes (<a href="http://codepen.io/sean_codes">@sean_codes</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>I hope this helps you please let me know if you have any questions!</p>
 
     </p>
 </article>
@@ -107,49 +134,8 @@
               
 
               
-            
-              
-              
-
-              
-
-              
-            
-              
-              
-
-              
-
-              
-            
-              
-              
-
-              
-
-              
                 <div>
-                    <h6><a href="/2017/02/12/which-language-do-you-prefer">Which language do you prefer? <span class="label label-default">about</span>  <span class="label label-default">life</span> </a></h6>
-                </div>
-                
-                
-              
-            
-              
-              
-
-              
-
-              
-            
-              
-              
-
-              
-
-              
-                <div>
-                    <h6><a href="/2017/02/12/where-are-you-from">Haha where you from man! <span class="label label-default">about</span>  <span class="label label-default">life</span> </a></h6>
+                    <h6><a href="/2017/02/14/2017-codepen-material-fab-floating-action-button">Codepen Floating Action Button <span class="label label-default">codepen</span>  <span class="label label-default">material</span>  <span class="label label-default">frontend</span>  <span class="label label-default">animation</span> </a></h6>
                 </div>
                 
                 
@@ -301,17 +287,250 @@
               
 
               
-                <div>
-                    <h6><a href="/2017/02/12/making-a-board-game-and-turn-it-into-a-mmo">I'm really interested in making a board game and after that turn it into some kind of MMO. Do you have any experience? <span class="label label-default">about</span>  <span class="label label-default">life</span> </a></h6>
-                </div>
-                
-                
-                  
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
+              
+              
+
+              
+
+              
+            
         </div>
 
         
     </div>
-    <div class="post-meta"><time datetime="2017-02-13T00:00:00-06:00" itemprop="datePublished">Feb 13, 2017</time></div>
+    <div class="post-meta"><time datetime="2017-02-15T00:00:00-06:00" itemprop="datePublished">Feb 15, 2017</time></div>
 
       </div>
     </main>
