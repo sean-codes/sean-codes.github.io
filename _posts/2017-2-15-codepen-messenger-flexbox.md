@@ -8,6 +8,7 @@ type: Codepen Daily
 This is a simple messenger template that uses vertical and horizontal flexbox!
 Some notes:
 
+
 # Make an element centered 
 
     /* the .parent can be body! */
