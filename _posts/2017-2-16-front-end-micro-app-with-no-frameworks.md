@@ -53,7 +53,7 @@ Because when hooked into a database and if you deelte a job in the middle of the
 When saving or adding a new job when you hit the save button the data is updated and then the entire table that is displayed is refreshed to display the freshly updated data
 
 
-<p data-height="265" data-theme-id="0" data-slug-hash="XpGvNg" data-default-tab="js,result" data-user="sean_codes" data-embed-version="2" data-pen-title="Front End - Cron Job Manager" class="codepen">See the Pen <a href="http://codepen.io/sean_codes/pen/XpGvNg/">Front End - Cron Job Manager</a> by Sean Codes (<a href="http://codepen.io/sean_codes">@sean_codes</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="600" data-theme-id="0" data-slug-hash="XpGvNg" data-default-tab="js,result" data-user="sean_codes" data-embed-version="2" data-pen-title="Front End - Cron Job Manager" class="codepen">See the Pen <a href="http://codepen.io/sean_codes/pen/XpGvNg/">Front End - Cron Job Manager</a> by Sean Codes (<a href="http://codepen.io/sean_codes">@sean_codes</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 I hope this helps you please let me know if you have any questions!
