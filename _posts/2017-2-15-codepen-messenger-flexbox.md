@@ -10,7 +10,7 @@ This is a simple messenger template that uses vertical and horizontal flexbox! T
 
 # Make an element centered
 
-    /* the .parent can be body! */
+    /* the .parent can be body! Just make sure body and html are height:100% */
     .parent{ display: flex; }
     .child {flex: 1; margin: auto; }
 
