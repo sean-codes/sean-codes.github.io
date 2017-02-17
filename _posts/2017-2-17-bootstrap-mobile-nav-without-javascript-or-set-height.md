@@ -2,8 +2,8 @@
 layout: post
 from:
 tags: [codepen, material, flexbox, jquery, frontend, animation, data]
-title: Creating a tool for handling backend cron jobs
-type: Codepen Daily
+title: Bootstrap Style Mobile Nav without JavaScript or Static Height
+type: Codepen Daily 27
 ---
 
 Hi! This is a basic template for a responsive navigation for desktop/tabel and mobile phone. The mobile phone will go full width and drop down the way bootstrap does. The desktop version displays the buttons at the top with the primary button floated to the right. These are some notes from the project:
