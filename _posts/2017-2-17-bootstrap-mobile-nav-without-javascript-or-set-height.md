@@ -20,7 +20,10 @@ Since the non floated buttons where switched to `display:inline-block` we don't 
 # Hiding the mobile nav with dynamic height
 To do this I set the container as `overflow:hidden` and then on hiding the nav I use `transform:translateY(100%)`. 
 
-    /* Instead of using checkbox you could toggle a class with javascript. Some people don't like the checkbox for toggling but I think it's much more elegant */
+    /* 
+        Instead of using checkbox you could toggle a class with javascript. 
+        Some people don't like the checkbox for toggling but I think it's much more elegant 
+    */
     nav input:checked + ul{
      transform:translateY(-100%);
     }
