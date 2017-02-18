@@ -1,9 +1,9 @@
 ---
 layout: post
 tags: [codepen, material, css, coding, nojs]
-from: aadi._n
+from: 
 title: Pure CSS Material Design FAB Button Burst Modal
-type: question
+type: Codepen daily 29
 ---
 
 This is a codepen of a material design FAB burst button. When you click the button it will burst and show the content. These are some notes I took while making this micro app.
