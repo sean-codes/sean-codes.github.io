@@ -22,10 +22,10 @@ I broke the button innt into many parts and the entire button could be wrapped i
                 div.ring
                 div.outer
                 div.inner +
-        div.content 
+        div.content
             h1 Real content
             p The content
-            
+
 ## Scaling from the center
 Initially I was using width and height and animating on those while translating the X to keep it centered. I found that using `transform:scale(amount)` works better but will bug out when scaling to fast it won't render sharp if scaling to fast.
 

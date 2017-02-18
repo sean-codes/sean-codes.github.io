@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>I want to setup a database at work and I&#39;m thinking that it should be web accessible. I would like to run is on a Linux machine. What are your thoughts off the top of your head? What problems could I face, should I use a different OS?</title>
-  <meta name="description" content="Ubuntu 16.04. Easy to setup and install MySQL or really anything pretty quickly. I usually run all my web software on Ubuntu with Node.JS or PHP using MySQL ...">
+  <title>Pure CSS Material Design FAB Button Burst Modal</title>
+  <meta name="description" content="This is a codepen of a material design FAB burst button. When you click the button it will burst and show the content. These are some notes I took while maki...">
 
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/2017/02/12/setup-a-database-web-accessible-linux">
+  <link rel="canonical" href="http://localhost:4000/2017/02/18/material-fab-burst-modal-button-with-content">
   <link rel="alternate" type="application/rss+xml" title="Sean Codes" href="/feed.xml">
   <link rel="shortcut icon" type="image/png" href="/assets/favicon.png" >
 
@@ -78,14 +78,52 @@
         <article class="container" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 itemprop="name headline">I want to setup a database at work and I&#39;m thinking that it should be web accessible. I would like to run is on a Linux machine. What are your thoughts off the top of your head? What problems could I face, should I use a different OS?</h1>
+    <h1 itemprop="name headline">Pure CSS Material Design FAB Button Burst Modal</h1>
   </header>
   <hr>
   <p class="post-content" itemprop="articleBody">
-    <p>Ubuntu 16.04. Easy to setup and install MySQL or really anything pretty quickly. I usually run all my web software on Ubuntu with Node.JS or PHP using MySQL for databases. I prefer to just use the command line unless it’s on a system with a bunch of resources and I want to have the CLI and a web browser open at the same time learning about setting something up. It is usually easier to simply SSH in and copy and paste from your main machine.</p>
+    <p>This is a codepen of a material design FAB burst button. When you click the button it will burst and show the content. These are some notes I took while making this micro app.</p>
+
+<h2 id="positioning-the-button">Positioning the button</h2>
+<p>To position the button I’m using <code class="highlighter-rouge">position:relative</code> on the container and <code class="highlighter-rouge">position:absolute</code> on the button. Then just a <code class="highlighter-rouge">buttom:y</code>, <code class="highlighter-rouge">right:x</code></p>
+
+<h2 id="the-html-for-the-burst-button">The HTML for the burst button</h2>
+<p>To do this button required a rediculous amount of html. Almost to the point that this would probably never be used in a production enviroment!
+I broke the button innt into many parts and the entire button could be wrapped in a container of its own to keep it abstracted from the main page content that way it overlays but to keep it simple I wanted to focus on the main idea :)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>div.container
+    input.btn(type="checkbox")
+    div.btn
+        div.circle
+            div.ring
+            div.outer
+            div.inner +
+    div.content
+        h1 Real content
+        p The content
+</code></pre>
+</div>
+
+<h2 id="scaling-from-the-center">Scaling from the center</h2>
+<p>Initially I was using width and height and animating on those while translating the X to keep it centered. I found that using <code class="highlighter-rouge">transform:scale(amount)</code> works better but will bug out when scaling to fast it won’t render sharp if scaling to fast.</p>
+
+<h2 id="the-burst-effect">The burst effect</h2>
+<p>It’s actually not a crazy difficult effect!</p>
+<ul>
+  <li>First transition the ring by using <code class="highlighter-rouge">transform: scale(6)</code></li>
+  <li>Then delay the outer and <code class="highlighter-rouge">transform: scale(30)</code></li>
+  <li>After another delay on the content I use <code class="highlighter-rouge">opacity:1</code>.</li>
+</ul>
+
+<h2 id="show-me-the-code">Show me the code</h2>
+<p>Here is the codepen please take a look let me know if you have any questions or need any help!</p>
+
+<p data-height="550" data-theme-id="dark" data-slug-hash="PWgMod" data-default-tab="css,result" data-user="sean_codes" data-embed-version="2" data-pen-title="Front End Day 29 - NO JAVASCRIPT Material FAB Burst Popup with content" class="codepen">See the Pen <a href="http://codepen.io/sean_codes/pen/PWgMod/">Front End Day 29 - NO JAVASCRIPT Material FAB Burst Popup with content</a> by Sean Codes (<a href="http://codepen.io/sean_codes">@sean_codes</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 
   </p>
-  <div class="post-meta"><time datetime="2017-02-12T00:00:00-06:00" itemprop="datePublished">Feb 12, 2017</time></div>
+  <div class="post-meta"><time datetime="2017-02-18T00:00:00-06:00" itemprop="datePublished">Feb 18, 2017</time></div>
 </article>
 
 <div class="container" style="margin-top:20px;">
@@ -108,98 +146,8 @@
           
 
           
-        
-          
-          
-
-          
-
-          
-        
-          
-          
-
-          
-
-          
-        
-          
-          
-
-          
-
-          
-        
-          
-          
-
-          
-
-          
-        
-          
-          
-
-          
-
-          
-        
-          
-          
-
-          
-
-          
-        
-          
-          
-
-          
-
-          
             <div>
-                <h6><a href="/2017/02/12/where-can-i-learn-to-use-sql">Where did you learn to use SQL? <span class="label label-default">database</span> </a></h6>
-            </div>
-            
-            
-          
-        
-          
-          
-
-          
-
-          
-        
-          
-          
-
-          
-
-          
-        
-          
-          
-
-          
-
-          
-        
-          
-          
-
-          
-
-          
-        
-          
-          
-
-          
-
-          
-            <div>
-                <h6><a href="/2017/02/12/what-os-do-you-use-for-coding-nodejs">I want to ask toy that OS (Operating System) do you use for coding Node.JS apps? I don't know if windows is good. <span class="label label-default">os</span>  <span class="label label-default">linux</span> </a></h6>
+                <h6><a href="/2017/02/17/bootstrap-mobile-nav-without-javascript-or-set-height">Bootstrap Style Mobile Nav without JavaScript or Static Height <span class="label label-default">codepen</span>  <span class="label label-default">material</span> </a></h6>
             </div>
             
             
@@ -212,7 +160,20 @@
 
           
             <div>
-                <h6><a href="/2017/02/12/what-operating-system-game-engine-run-on">On what operating system will this game be on? <span class="label label-default">os</span> </a></h6>
+                <h6><a href="/2017/02/16/front-end-micro-app-with-no-frameworks">Creating a tool for handling backend cron jobs <span class="label label-default">codepen</span>  <span class="label label-default">material</span> </a></h6>
+            </div>
+            
+            
+          
+        
+          
+          
+
+          
+
+          
+            <div>
+                <h6><a href="/2017/02/15/codepen-messenger-flexbox">A Messenger template with flexbox <span class="label label-default">codepen</span>  <span class="label label-default">material</span> </a></h6>
             </div>
             
             

@@ -8,17 +8,17 @@ type: Codepen Daily
 
 This is a simple messenger template that uses vertical and horizontal flexbox! These are some notes I took from the project.
 
-# Make an element centered
+## Make an element centered
 
     /* the .parent can be body! Just make sure body and html are height:100% */
     .parent{ display: flex; }
     .child {flex: 1; margin: auto; }
 
-# Vertical flexbox
+## Vertical flexbox
 
     .parent{ display: flex; flex-direction: column; }
 
-# Fluid design element with fixed width of 100px
+## Fluid design element with fixed width of 100px
 
     .parent{ display: flex; }
     .elementFixedWidth { width: 100px; }

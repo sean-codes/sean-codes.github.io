@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Codepen Floating Action Button</title>
-  <meta name="description" content="This is a pen for a floating action button using CSS. This could be done using the checkbox trick but I felt using JavaScript will make it flow better becaus...">
+  <title>Creating a tool for handling backend cron jobs</title>
+  <meta name="description" content="This is a javascript heavy front end template I created for creating, deleting, and updating backend cron jobs. This uses no frameworks or plugins. Here are ...">
 
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/2017/02/14/2017-codepen-material-fab-floating-action-button">
+  <link rel="canonical" href="http://localhost:4000/2017/02/16/front-end-micro-app-with-no-frameworks">
   <link rel="alternate" type="application/rss+xml" title="Sean Codes" href="/feed.xml">
   <link rel="shortcut icon" type="image/png" href="/assets/favicon.png" >
 
@@ -78,19 +78,65 @@
         <article class="container" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 itemprop="name headline">Codepen Floating Action Button</h1>
+    <h1 itemprop="name headline">Creating a tool for handling backend cron jobs</h1>
   </header>
   <hr>
   <p class="post-content" itemprop="articleBody">
-    <p>This is a pen for a floating action button using CSS. This could be done using the checkbox trick but I felt using JavaScript will make it flow better because the action button already required a bunch of CSS.</p>
+    <p>This is a javascript heavy front end template I created for creating, deleting, and updating backend cron jobs. This uses no frameworks or plugins. Here are some notes:</p>
 
-<p data-height="540" data-theme-id="0" data-slug-hash="qRgEOJ" data-default-tab="css,result" data-user="sean_codes" data-embed-version="2" data-pen-title="Front End 25 - Material Design Floating Action Button" class="codepen">See the Pen <a href="http://codepen.io/sean_codes/pen/qRgEOJ/">Front End 25 - Material Design Floating Action Button</a> by Sean Codes (<a href="http://codepen.io/sean_codes">@sean_codes</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<h2 id="data-storage">Data storage</h2>
+<p>The data is being stores in a JSON array. The id field is for when creating new jobs it will stay uniqie until hooked up to a database.</p>
+
+<h2 id="documentqueryselector-for-fake-jquery">document.querySelector for fake JQuery</h2>
+<p>I am using this to select elements to cut out the need for JQuery</p>
+
+<p>//Simple Fake JQuery
+   var $ = function(str){
+      var ele = document.querySelectorAll(str);
+      if(ele.length == 1) ele = ele[0];
+      ele.on = function(event, func){ this.addEventListener(event, func); }
+      return ele;
+   };</p>
+
+<h2 id="the-app-functions">The app functions</h2>
+<p>I broke the app into a bunch of small functions for that we could manipulate the data and template with using simplier commands like openModify and close Modify</p>
+
+<h2 id="appending-an-element-with-vanilla-javascript">Appending an element with vanilla javascript</h2>
+<p>To append an element using vanilla javascript I kept it simple and created a string of the element and then added it to the innerHTML. This works well!</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var template = `
+   &lt;tr class='jobrow' id='${jobID}'&gt;
+      &lt;td&gt;${job.name}&lt;/td&gt;
+      &lt;td&gt;${job.path}&lt;/td&gt;
+      &lt;td&gt;${job.startDate} ${job.startTime}&lt;/td&gt;
+      &lt;td&gt;${job.interval}&lt;/td&gt;
+   &lt;/tr&gt;`;
+ app.jobs.innerHTML += template;
+</code></pre>
+</div>
+
+<h2 id="getting-a-job-index">Getting a job index</h2>
+<p>Because when hooked into a database and if you deelte a job in the middle of the array the job keys are not going to always match up. To keep a unique key associated with a job I created a simple function to keturn the job key.</p>
+
+<p>getJobIndex: function(key){
+         var index = 0;
+         app.data.rows.forEach(function(job, index){
+            if(job.key == Number(key))
+               return;
+         })
+         return index
+      }</p>
+
+<p>#Saving and Adding new jobs
+When saving or adding a new job when you hit the save button the data is updated and then the entire table that is displayed is refreshed to display the freshly updated data</p>
+
+<p data-height="600" data-theme-id="0" data-slug-hash="XpGvNg" data-default-tab="js,result" data-user="sean_codes" data-embed-version="2" data-pen-title="Front End - Cron Job Manager" class="codepen">See the Pen <a href="http://codepen.io/sean_codes/pen/XpGvNg/">Front End - Cron Job Manager</a> by Sean Codes (<a href="http://codepen.io/sean_codes">@sean_codes</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 <p>I hope this helps you please let me know if you have any questions!</p>
 
   </p>
-  <div class="post-meta"><time datetime="2017-02-14T00:00:00-06:00" itemprop="datePublished">Feb 14, 2017</time></div>
+  <div class="post-meta"><time datetime="2017-02-16T00:00:00-06:00" itemprop="datePublished">Feb 16, 2017</time></div>
 </article>
 
 <div class="container" style="margin-top:20px;">
@@ -120,7 +166,7 @@
 
           
             <div>
-                <h6><a href="/2017/02/17/bootstrap-mobile-nav-without-javascript-or-set-height">Bootstrap Style Mobile Nav without JavaScript or Static Height <span class="label label-default">codepen</span>  <span class="label label-default">material</span>  <span class="label label-default">frontend</span>  <span class="label label-default">animation</span> </a></h6>
+                <h6><a href="/2017/02/17/bootstrap-mobile-nav-without-javascript-or-set-height">Bootstrap Style Mobile Nav without JavaScript or Static Height <span class="label label-default">codepen</span>  <span class="label label-default">material</span>  <span class="label label-default">flexbox</span>  <span class="label label-default">jquery</span>  <span class="label label-default">frontend</span>  <span class="label label-default">animation</span>  <span class="label label-default">data</span> </a></h6>
             </div>
             
             
@@ -132,8 +178,15 @@
           
 
           
+        
+          
+          
+
+          
+
+          
             <div>
-                <h6><a href="/2017/02/16/front-end-micro-app-with-no-frameworks">Creating a tool for handling backend cron jobs <span class="label label-default">codepen</span>  <span class="label label-default">material</span>  <span class="label label-default">frontend</span>  <span class="label label-default">animation</span> </a></h6>
+                <h6><a href="/2017/02/15/codepen-messenger-flexbox">A Messenger template with flexbox <span class="label label-default">codepen</span>  <span class="label label-default">material</span>  <span class="label label-default">flexbox</span>  <span class="label label-default">jquery</span>  <span class="label label-default">frontend</span>  <span class="label label-default">animation</span> </a></h6>
             </div>
             
             

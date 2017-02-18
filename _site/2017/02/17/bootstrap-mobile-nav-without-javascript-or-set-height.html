@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Codepen Floating Action Button</title>
-  <meta name="description" content="This is a pen for a floating action button using CSS. This could be done using the checkbox trick but I felt using JavaScript will make it flow better becaus...">
+  <title>Bootstrap Style Mobile Nav without JavaScript or Static Height</title>
+  <meta name="description" content="Hi! This is a basic template for a responsive navigation for desktop/tabel and mobile phone. The mobile phone will go full width and drop down the way bootst...">
 
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/2017/02/14/2017-codepen-material-fab-floating-action-button">
+  <link rel="canonical" href="http://localhost:4000/2017/02/17/bootstrap-mobile-nav-without-javascript-or-set-height">
   <link rel="alternate" type="application/rss+xml" title="Sean Codes" href="/feed.xml">
   <link rel="shortcut icon" type="image/png" href="/assets/favicon.png" >
 
@@ -78,19 +78,49 @@
         <article class="container" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 itemprop="name headline">Codepen Floating Action Button</h1>
+    <h1 itemprop="name headline">Bootstrap Style Mobile Nav without JavaScript or Static Height</h1>
   </header>
   <hr>
   <p class="post-content" itemprop="articleBody">
-    <p>This is a pen for a floating action button using CSS. This could be done using the checkbox trick but I felt using JavaScript will make it flow better because the action button already required a bunch of CSS.</p>
+    <p>Hi! This is a basic template for a responsive navigation for desktop/tabel and mobile phone. The mobile phone will go full width and drop down the way bootstrap does. The desktop version displays the buttons at the top with the primary button floated to the right. These are some notes from the project:</p>
 
-<p data-height="540" data-theme-id="0" data-slug-hash="qRgEOJ" data-default-tab="css,result" data-user="sean_codes" data-embed-version="2" data-pen-title="Front End 25 - Material Design Floating Action Button" class="codepen">See the Pen <a href="http://codepen.io/sean_codes/pen/qRgEOJ/">Front End 25 - Material Design Floating Action Button</a> by Sean Codes (<a href="http://codepen.io/sean_codes">@sean_codes</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<h2 id="top-nav-floating-primary-without-clearfix">Top nav floating primary without clearfix</h2>
+<p>Since the non floated buttons where switched to <code class="highlighter-rouge">display:inline-block</code> we don’t need to use a clearfix. If you want the buttons spaced to match the outer padding I would <code class="highlighter-rouge">float:right</code> on the nav list elements. Then use a simple clear fix (IE 8+):</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.clearfix:after{
+    display:table;
+    content: " ";
+    clear:both;
+}
+</code></pre>
+</div>
+
+<h2 id="hiding-the-mobile-nav-with-dynamic-height">Hiding the mobile nav with dynamic height</h2>
+<p>To do this I set the container as <code class="highlighter-rouge">overflow:hidden</code> and then on hiding the nav I use <code class="highlighter-rouge">transform:translateY(100%)</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/*
+    Instead of using checkbox you could toggle a class with javascript.
+    Some people don't like the checkbox for toggling but I think it's much more elegant
+*/
+nav input:checked + ul{
+ transform:translateY(-100%);
+}
+</code></pre>
+</div>
+
+<h2 id="mobile-first-nav">Mobile first nav</h2>
+<p>I designed this by doing the mobile parts first then I added the styles to turn the list elements into <code class="highlighter-rouge">inline-block</code> and remove the transform.</p>
+
+<h2 id="the-effect-is-most-likely-only-mobile-for-you">The effect is most likely only mobile for you!</h2>
+<p>If your on a phone this is only going to display mobile you might be able to go landscape mode to see desktop version.</p>
+
+<p data-height="600" data-theme-id="0" data-slug-hash="XpQOwG" data-default-tab="css,result" data-user="sean_codes" data-embed-version="2" data-pen-title="Front End - Bootstrap Style Mobile Nav without JavaScript or Static Height" class="codepen">See the Pen <a href="http://codepen.io/sean_codes/pen/XpQOwG/">Front End - Bootstrap Style Mobile Nav without JavaScript or Static Height</a> by Sean Codes (<a href="http://codepen.io/sean_codes">@sean_codes</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-<p>I hope this helps you please let me know if you have any questions!</p>
+<p>Please let me know if you have any questions I can help you understand better!</p>
 
   </p>
-  <div class="post-meta"><time datetime="2017-02-14T00:00:00-06:00" itemprop="datePublished">Feb 14, 2017</time></div>
+  <div class="post-meta"><time datetime="2017-02-17T00:00:00-06:00" itemprop="datePublished">Feb 17, 2017</time></div>
 </article>
 
 <div class="container" style="margin-top:20px;">
@@ -119,8 +149,15 @@
           
 
           
+        
+          
+          
+
+          
+
+          
             <div>
-                <h6><a href="/2017/02/17/bootstrap-mobile-nav-without-javascript-or-set-height">Bootstrap Style Mobile Nav without JavaScript or Static Height <span class="label label-default">codepen</span>  <span class="label label-default">material</span>  <span class="label label-default">frontend</span>  <span class="label label-default">animation</span> </a></h6>
+                <h6><a href="/2017/02/16/front-end-micro-app-with-no-frameworks">Creating a tool for handling backend cron jobs <span class="label label-default">codepen</span>  <span class="label label-default">material</span>  <span class="label label-default">flexbox</span>  <span class="label label-default">jquery</span>  <span class="label label-default">frontend</span>  <span class="label label-default">animation</span>  <span class="label label-default">data</span> </a></h6>
             </div>
             
             
@@ -133,7 +170,7 @@
 
           
             <div>
-                <h6><a href="/2017/02/16/front-end-micro-app-with-no-frameworks">Creating a tool for handling backend cron jobs <span class="label label-default">codepen</span>  <span class="label label-default">material</span>  <span class="label label-default">frontend</span>  <span class="label label-default">animation</span> </a></h6>
+                <h6><a href="/2017/02/15/codepen-messenger-flexbox">A Messenger template with flexbox <span class="label label-default">codepen</span>  <span class="label label-default">material</span>  <span class="label label-default">flexbox</span>  <span class="label label-default">jquery</span>  <span class="label label-default">frontend</span>  <span class="label label-default">animation</span> </a></h6>
             </div>
             
             

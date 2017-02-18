@@ -1,21 +1,144 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-02-15T01:45:40-06:00</updated><id>http://localhost:4000//</id><title type="html">Sean Codes</title><subtitle>Hi! I'm a software developer in Chicago specializing in Web Development, Network programming, and 2D Game development.
-</subtitle><entry><title type="html">A Messenger template with flexbox</title><link href="http://localhost:4000/2017/02/15/codepen-messenger-flexbox" rel="alternate" type="text/html" title="A Messenger template with flexbox" /><published>2017-02-15T00:00:00-06:00</published><updated>2017-02-15T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/15/codepen-messenger-flexbox</id><content type="html" xml:base="http://localhost:4000/2017/02/15/codepen-messenger-flexbox">&lt;p&gt;This is a simple messenger template that uses vertical and horizontal flexbox! These are some notes I took from the project.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-02-18T14:37:16-06:00</updated><id>http://localhost:4000//</id><title type="html">Sean Codes</title><subtitle>Hi! I'm a software developer in Chicago specializing in Web Development, Network programming, and 2D Game development.
+</subtitle><entry><title type="html">Pure CSS Material Design FAB Button Burst Modal</title><link href="http://localhost:4000/2017/02/18/material-fab-burst-modal-button-with-content" rel="alternate" type="text/html" title="Pure CSS Material Design FAB Button Burst Modal" /><published>2017-02-18T00:00:00-06:00</published><updated>2017-02-18T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/18/material-fab-burst-modal-button-with-content</id><content type="html" xml:base="http://localhost:4000/2017/02/18/material-fab-burst-modal-button-with-content">&lt;p&gt;This is a codepen of a material design FAB burst button. When you click the button it will burst and show the content. These are some notes I took while making this micro app.&lt;/p&gt;
 
-&lt;h1 id=&quot;make-an-element-centered&quot;&gt;Make an element centered&lt;/h1&gt;
+&lt;h2 id=&quot;positioning-the-button&quot;&gt;Positioning the button&lt;/h2&gt;
+&lt;p&gt;To position the button I’m using &lt;code class=&quot;highlighter-rouge&quot;&gt;position:relative&lt;/code&gt; on the container and &lt;code class=&quot;highlighter-rouge&quot;&gt;position:absolute&lt;/code&gt; on the button. Then just a &lt;code class=&quot;highlighter-rouge&quot;&gt;buttom:y&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;right:x&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/* the .parent can be body! */
+&lt;h2 id=&quot;the-html-for-the-burst-button&quot;&gt;The HTML for the burst button&lt;/h2&gt;
+&lt;p&gt;To do this button required a rediculous amount of html. Almost to the point that this would probably never be used in a production enviroment!
+I broke the button innt into many parts and the entire button could be wrapped in a container of its own to keep it abstracted from the main page content that way it overlays but to keep it simple I wanted to focus on the main idea :)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;div.container
+    input.btn(type=&quot;checkbox&quot;)
+    div.btn
+        div.circle
+            div.ring
+            div.outer
+            div.inner +
+    div.content
+        h1 Real content
+        p The content
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;scaling-from-the-center&quot;&gt;Scaling from the center&lt;/h2&gt;
+&lt;p&gt;Initially I was using width and height and animating on those while translating the X to keep it centered. I found that using &lt;code class=&quot;highlighter-rouge&quot;&gt;transform:scale(amount)&lt;/code&gt; works better but will bug out when scaling to fast it won’t render sharp if scaling to fast.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-burst-effect&quot;&gt;The burst effect&lt;/h2&gt;
+&lt;p&gt;It’s actually not a crazy difficult effect!&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;First transition the ring by using &lt;code class=&quot;highlighter-rouge&quot;&gt;transform: scale(6)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Then delay the outer and &lt;code class=&quot;highlighter-rouge&quot;&gt;transform: scale(30)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;After another delay on the content I use &lt;code class=&quot;highlighter-rouge&quot;&gt;opacity:1&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;show-me-the-code&quot;&gt;Show me the code&lt;/h2&gt;
+&lt;p&gt;Here is the codepen please take a look let me know if you have any questions or need any help!&lt;/p&gt;
+
+&lt;p data-height=&quot;550&quot; data-theme-id=&quot;dark&quot; data-slug-hash=&quot;PWgMod&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Front End Day 29 - NO JAVASCRIPT Material FAB Burst Popup with content&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/PWgMod/&quot;&gt;Front End Day 29 - NO JAVASCRIPT Material FAB Burst Popup with content&lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content><category term="codepen" /><category term="material" /><category term="css" /><category term="coding" /><category term="nojs" /><summary type="html">This is a codepen of a material design FAB burst button. When you click the button it will burst and show the content. These are some notes I took while making this micro app.</summary></entry><entry><title type="html">Bootstrap Style Mobile Nav without JavaScript or Static Height</title><link href="http://localhost:4000/2017/02/17/bootstrap-mobile-nav-without-javascript-or-set-height" rel="alternate" type="text/html" title="Bootstrap Style Mobile Nav without JavaScript or Static Height" /><published>2017-02-17T00:00:00-06:00</published><updated>2017-02-17T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/17/bootstrap-mobile-nav-without-javascript-or-set-height</id><content type="html" xml:base="http://localhost:4000/2017/02/17/bootstrap-mobile-nav-without-javascript-or-set-height">&lt;p&gt;Hi! This is a basic template for a responsive navigation for desktop/tabel and mobile phone. The mobile phone will go full width and drop down the way bootstrap does. The desktop version displays the buttons at the top with the primary button floated to the right. These are some notes from the project:&lt;/p&gt;
+
+&lt;h2 id=&quot;top-nav-floating-primary-without-clearfix&quot;&gt;Top nav floating primary without clearfix&lt;/h2&gt;
+&lt;p&gt;Since the non floated buttons where switched to &lt;code class=&quot;highlighter-rouge&quot;&gt;display:inline-block&lt;/code&gt; we don’t need to use a clearfix. If you want the buttons spaced to match the outer padding I would &lt;code class=&quot;highlighter-rouge&quot;&gt;float:right&lt;/code&gt; on the nav list elements. Then use a simple clear fix (IE 8+):&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.clearfix:after{
+    display:table;
+    content: &quot; &quot;;
+    clear:both;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;hiding-the-mobile-nav-with-dynamic-height&quot;&gt;Hiding the mobile nav with dynamic height&lt;/h2&gt;
+&lt;p&gt;To do this I set the container as &lt;code class=&quot;highlighter-rouge&quot;&gt;overflow:hidden&lt;/code&gt; and then on hiding the nav I use &lt;code class=&quot;highlighter-rouge&quot;&gt;transform:translateY(100%)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/*
+    Instead of using checkbox you could toggle a class with javascript.
+    Some people don't like the checkbox for toggling but I think it's much more elegant
+*/
+nav input:checked + ul{
+ transform:translateY(-100%);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;mobile-first-nav&quot;&gt;Mobile first nav&lt;/h2&gt;
+&lt;p&gt;I designed this by doing the mobile parts first then I added the styles to turn the list elements into &lt;code class=&quot;highlighter-rouge&quot;&gt;inline-block&lt;/code&gt; and remove the transform.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-effect-is-most-likely-only-mobile-for-you&quot;&gt;The effect is most likely only mobile for you!&lt;/h2&gt;
+&lt;p&gt;If your on a phone this is only going to display mobile you might be able to go landscape mode to see desktop version.&lt;/p&gt;
+
+&lt;p data-height=&quot;600&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;XpQOwG&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Front End - Bootstrap Style Mobile Nav without JavaScript or Static Height&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/XpQOwG/&quot;&gt;Front End - Bootstrap Style Mobile Nav without JavaScript or Static Height&lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Please let me know if you have any questions I can help you understand better!&lt;/p&gt;</content><category term="codepen" /><category term="material" /><category term="flexbox" /><category term="jquery" /><category term="frontend" /><category term="animation" /><category term="data" /><summary type="html">Hi! This is a basic template for a responsive navigation for desktop/tabel and mobile phone. The mobile phone will go full width and drop down the way bootstrap does. The desktop version displays the buttons at the top with the primary button floated to the right. These are some notes from the project:</summary></entry><entry><title type="html">Creating a tool for handling backend cron jobs</title><link href="http://localhost:4000/2017/02/16/front-end-micro-app-with-no-frameworks" rel="alternate" type="text/html" title="Creating a tool for handling backend cron jobs" /><published>2017-02-16T00:00:00-06:00</published><updated>2017-02-16T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/16/front-end-micro-app-with-no-frameworks</id><content type="html" xml:base="http://localhost:4000/2017/02/16/front-end-micro-app-with-no-frameworks">&lt;p&gt;This is a javascript heavy front end template I created for creating, deleting, and updating backend cron jobs. This uses no frameworks or plugins. Here are some notes:&lt;/p&gt;
+
+&lt;h2 id=&quot;data-storage&quot;&gt;Data storage&lt;/h2&gt;
+&lt;p&gt;The data is being stores in a JSON array. The id field is for when creating new jobs it will stay uniqie until hooked up to a database.&lt;/p&gt;
+
+&lt;h2 id=&quot;documentqueryselector-for-fake-jquery&quot;&gt;document.querySelector for fake JQuery&lt;/h2&gt;
+&lt;p&gt;I am using this to select elements to cut out the need for JQuery&lt;/p&gt;
+
+&lt;p&gt;//Simple Fake JQuery
+   var $ = function(str){
+      var ele = document.querySelectorAll(str);
+      if(ele.length == 1) ele = ele[0];
+      ele.on = function(event, func){ this.addEventListener(event, func); }
+      return ele;
+   };&lt;/p&gt;
+
+&lt;h2 id=&quot;the-app-functions&quot;&gt;The app functions&lt;/h2&gt;
+&lt;p&gt;I broke the app into a bunch of small functions for that we could manipulate the data and template with using simplier commands like openModify and close Modify&lt;/p&gt;
+
+&lt;h2 id=&quot;appending-an-element-with-vanilla-javascript&quot;&gt;Appending an element with vanilla javascript&lt;/h2&gt;
+&lt;p&gt;To append an element using vanilla javascript I kept it simple and created a string of the element and then added it to the innerHTML. This works well!&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var template = `
+   &amp;lt;tr class='jobrow' id='${jobID}'&amp;gt;
+      &amp;lt;td&amp;gt;${job.name}&amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;${job.path}&amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;${job.startDate} ${job.startTime}&amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;${job.interval}&amp;lt;/td&amp;gt;
+   &amp;lt;/tr&amp;gt;`;
+ app.jobs.innerHTML += template;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;getting-a-job-index&quot;&gt;Getting a job index&lt;/h2&gt;
+&lt;p&gt;Because when hooked into a database and if you deelte a job in the middle of the array the job keys are not going to always match up. To keep a unique key associated with a job I created a simple function to keturn the job key.&lt;/p&gt;
+
+&lt;p&gt;getJobIndex: function(key){
+         var index = 0;
+         app.data.rows.forEach(function(job, index){
+            if(job.key == Number(key))
+               return;
+         })
+         return index
+      }&lt;/p&gt;
+
+&lt;p&gt;#Saving and Adding new jobs
+When saving or adding a new job when you hit the save button the data is updated and then the entire table that is displayed is refreshed to display the freshly updated data&lt;/p&gt;
+
+&lt;p data-height=&quot;600&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;XpGvNg&quot; data-default-tab=&quot;js,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Front End - Cron Job Manager&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/XpGvNg/&quot;&gt;Front End - Cron Job Manager&lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;I hope this helps you please let me know if you have any questions!&lt;/p&gt;</content><category term="codepen" /><category term="material" /><category term="flexbox" /><category term="jquery" /><category term="frontend" /><category term="animation" /><category term="data" /><summary type="html">This is a javascript heavy front end template I created for creating, deleting, and updating backend cron jobs. This uses no frameworks or plugins. Here are some notes:</summary></entry><entry><title type="html">A Messenger template with flexbox</title><link href="http://localhost:4000/2017/02/15/codepen-messenger-flexbox" rel="alternate" type="text/html" title="A Messenger template with flexbox" /><published>2017-02-15T00:00:00-06:00</published><updated>2017-02-15T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/15/codepen-messenger-flexbox</id><content type="html" xml:base="http://localhost:4000/2017/02/15/codepen-messenger-flexbox">&lt;p&gt;This is a simple messenger template that uses vertical and horizontal flexbox! These are some notes I took from the project.&lt;/p&gt;
+
+&lt;h2 id=&quot;make-an-element-centered&quot;&gt;Make an element centered&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/* the .parent can be body! Just make sure body and html are height:100% */
 .parent{ display: flex; }
 .child {flex: 1; margin: auto; }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h1 id=&quot;vertical-flexbox&quot;&gt;Vertical flexbox&lt;/h1&gt;
+&lt;h2 id=&quot;vertical-flexbox&quot;&gt;Vertical flexbox&lt;/h2&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.parent{ display: flex; flex-direction: column; }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h1 id=&quot;fluid-design-element-with-fixed-width-of-100px&quot;&gt;Fluid design element with fixed width of 100px&lt;/h1&gt;
+&lt;h2 id=&quot;fluid-design-element-with-fixed-width-of-100px&quot;&gt;Fluid design element with fixed width of 100px&lt;/h2&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.parent{ display: flex; }
 .elementFixedWidth { width: 100px; }
@@ -31,4 +154,4 @@
 &lt;p data-height=&quot;540&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;qRgEOJ&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Front End 25 - Material Design Floating Action Button&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/qRgEOJ/&quot;&gt;Front End 25 - Material Design Floating Action Button&lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
 &lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;I hope this helps you please let me know if you have any questions!&lt;/p&gt;</content><category term="codepen" /><category term="material" /><category term="frontend" /><category term="animation" /><summary type="html">This is a pen for a floating action button using CSS. This could be done using the checkbox trick but I felt using JavaScript will make it flow better because the action button already required a bunch of CSS.</summary></entry><entry><title type="html">Are you a programmer? How old are you?</title><link href="http://localhost:4000/2017/02/13/are-you-a-programmer-how-old" rel="alternate" type="text/html" title="Are you a programmer? How old are you?" /><published>2017-02-13T00:00:00-06:00</published><updated>2017-02-13T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/13/are-you-a-programmer-how-old</id><content type="html" xml:base="http://localhost:4000/2017/02/13/are-you-a-programmer-how-old">&lt;p&gt;Hi! Yes and I’m 23 :]&lt;/p&gt;</content><category term="life" /><category term="about" /><category term="age" /><summary type="html">Hi! Yes and I’m 23 :]</summary></entry><entry><title type="html">I want to use Xamarin for cross platform development. Isn’t wrapping web apps a little bit slow and doesn’t feel like a native app?</title><link href="http://localhost:4000/2017/02/12/xamarin-for-cross-platform-app-development" rel="alternate" type="text/html" title="I want to use Xamarin for cross platform development. Isn't wrapping web apps a little bit slow and doesn't feel like a native app?" /><published>2017-02-12T00:00:00-06:00</published><updated>2017-02-12T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/12/xamarin-for-cross-platform-app-development</id><content type="html" xml:base="http://localhost:4000/2017/02/12/xamarin-for-cross-platform-app-development">&lt;p&gt;JavaScript is pretty fast already and CSS can access the GPU. If you use the right tools and techniques you should not be able to tell the difference in a Web App and native.&lt;/p&gt;</content><category term="app" /><category term="webapp" /><category term="gamedev" /><category term="tools" /><category term="cordova" /><summary type="html">JavaScript is pretty fast already and CSS can access the GPU. If you use the right tools and techniques you should not be able to tell the difference in a Web App and native.</summary></entry><entry><title type="html">Which language do you prefer?</title><link href="http://localhost:4000/2017/02/12/which-language-do-you-prefer" rel="alternate" type="text/html" title="Which language do you prefer?" /><published>2017-02-12T00:00:00-06:00</published><updated>2017-02-12T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/12/which-language-do-you-prefer</id><content type="html" xml:base="http://localhost:4000/2017/02/12/which-language-do-you-prefer">&lt;p&gt;Currently I have been hitting JavaScript pretty hard but I’m into PHP, Python, ColdFusion, C#. I think all languages are cool! :]&lt;/p&gt;</content><category term="php" /><category term="python" /><category term="language" /><category term="about" /><category term="life" /><summary type="html">Currently I have been hitting JavaScript pretty hard but I’m into PHP, Python, ColdFusion, C#. I think all languages are cool! :]</summary></entry><entry><title type="html">Where did you learn to use SQL?</title><link href="http://localhost:4000/2017/02/12/where-can-i-learn-to-use-sql" rel="alternate" type="text/html" title="Where did you learn to use SQL?" /><published>2017-02-12T00:00:00-06:00</published><updated>2017-02-12T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/12/where-can-i-learn-to-use-sql</id><content type="html" xml:base="http://localhost:4000/2017/02/12/where-can-i-learn-to-use-sql">&lt;p&gt;Learned the basics of SQL from w3schools.com. What you learn from the basic tutorials can usually get you through just about anything. I did not get very good with it until using it everyday at work and asking lots of questions to people much more skilled than me.&lt;/p&gt;</content><category term="sql" /><category term="learn" /><category term="start" /><category term="database" /><summary type="html">Learned the basics of SQL from w3schools.com. What you learn from the basic tutorials can usually get you through just about anything. I did not get very good with it until using it everyday at work and asking lots of questions to people much more skilled than me.</summary></entry><entry><title type="html">Haha where you from man!</title><link href="http://localhost:4000/2017/02/12/where-are-you-from" rel="alternate" type="text/html" title="Haha where you from man!" /><published>2017-02-12T00:00:00-06:00</published><updated>2017-02-12T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/12/where-are-you-from</id><content type="html" xml:base="http://localhost:4000/2017/02/12/where-are-you-from">&lt;p&gt;US city of Chicago :]&lt;/p&gt;</content><category term="about" /><category term="life" /><category term="chicago" /><summary type="html">US city of Chicago :]</summary></entry><entry><title type="html">Just curious what is the specifications on your MacBook? Think of getting one for coding.</title><link href="http://localhost:4000/2017/02/12/what-specs-for-macbook-coding" rel="alternate" type="text/html" title="Just curious what is the specifications on your MacBook? Think of getting one for coding." /><published>2017-02-12T00:00:00-06:00</published><updated>2017-02-12T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/12/what-specs-for-macbook-coding</id><content type="html" xml:base="http://localhost:4000/2017/02/12/what-specs-for-macbook-coding">&lt;p&gt;I’m using an early 2011 17in MacBook Pro. Has the I7 2.2Ghz, 8GB DDR3, and a 258GB SSD. If you get an older one just throw a SSD and bump it up to 8GB and you will be solid! Anything younger than 2013 will be really good!&lt;/p&gt;</content><category term="macbook" /><category term="tools" /><category term="macos" /><category term="best" /><summary type="html">I’m using an early 2011 17in MacBook Pro. Has the I7 2.2Ghz, 8GB DDR3, and a 258GB SSD. If you get an older one just throw a SSD and bump it up to 8GB and you will be solid! Anything younger than 2013 will be really good!</summary></entry><entry><title type="html">What software do I need to code? What’s the code editor you use?</title><link href="http://localhost:4000/2017/02/12/what-software-to-code-editor" rel="alternate" type="text/html" title="What software do I need to code? What's the code editor you use?" /><published>2017-02-12T00:00:00-06:00</published><updated>2017-02-12T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/12/what-software-to-code-editor</id><content type="html" xml:base="http://localhost:4000/2017/02/12/what-software-to-code-editor">&lt;p&gt;I use Sublime Text 3 at Work. Atom at Home. I also like Brackets&lt;/p&gt;</content><category term="sublime" /><category term="atom" /><category term="sql" /><category term="brackets" /><category term="tools" /><summary type="html">I use Sublime Text 3 at Work. Atom at Home. I also like Brackets</summary></entry><entry><title type="html">Good morning Sean. I was wondering what programs do you use?</title><link href="http://localhost:4000/2017/02/12/what-programs-for-coding-programming-web-development" rel="alternate" type="text/html" title="Good morning Sean. I was wondering what programs do you use?" /><published>2017-02-12T00:00:00-06:00</published><updated>2017-02-12T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/12/what-programs-for-coding-programming-web-development</id><content type="html" xml:base="http://localhost:4000/2017/02/12/what-programs-for-coding-programming-web-development">&lt;p&gt;My favorites right now are Sublime Text 3, Heidi SQL, and Google Chrome!&lt;/p&gt;</content><category term="tools" /><category term="software" /><category term="atom" /><category term="sql" /><category term="chrome" /><category term="sublime" /><summary type="html">My favorites right now are Sublime Text 3, Heidi SQL, and Google Chrome!</summary></entry></feed>
+&lt;p&gt;I hope this helps you please let me know if you have any questions!&lt;/p&gt;</content><category term="codepen" /><category term="material" /><category term="frontend" /><category term="animation" /><summary type="html">This is a pen for a floating action button using CSS. This could be done using the checkbox trick but I felt using JavaScript will make it flow better because the action button already required a bunch of CSS.</summary></entry><entry><title type="html">Are you a programmer? How old are you?</title><link href="http://localhost:4000/2017/02/13/are-you-a-programmer-how-old" rel="alternate" type="text/html" title="Are you a programmer? How old are you?" /><published>2017-02-13T00:00:00-06:00</published><updated>2017-02-13T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/13/are-you-a-programmer-how-old</id><content type="html" xml:base="http://localhost:4000/2017/02/13/are-you-a-programmer-how-old">&lt;p&gt;Hi! Yes and I’m 23 :]&lt;/p&gt;</content><category term="life" /><category term="about" /><category term="age" /><summary type="html">Hi! Yes and I’m 23 :]</summary></entry><entry><title type="html">I want to use Xamarin for cross platform development. Isn’t wrapping web apps a little bit slow and doesn’t feel like a native app?</title><link href="http://localhost:4000/2017/02/12/xamarin-for-cross-platform-app-development" rel="alternate" type="text/html" title="I want to use Xamarin for cross platform development. Isn't wrapping web apps a little bit slow and doesn't feel like a native app?" /><published>2017-02-12T00:00:00-06:00</published><updated>2017-02-12T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/12/xamarin-for-cross-platform-app-development</id><content type="html" xml:base="http://localhost:4000/2017/02/12/xamarin-for-cross-platform-app-development">&lt;p&gt;JavaScript is pretty fast already and CSS can access the GPU. If you use the right tools and techniques you should not be able to tell the difference in a Web App and native.&lt;/p&gt;</content><category term="app" /><category term="webapp" /><category term="gamedev" /><category term="tools" /><category term="cordova" /><summary type="html">JavaScript is pretty fast already and CSS can access the GPU. If you use the right tools and techniques you should not be able to tell the difference in a Web App and native.</summary></entry><entry><title type="html">Which language do you prefer?</title><link href="http://localhost:4000/2017/02/12/which-language-do-you-prefer" rel="alternate" type="text/html" title="Which language do you prefer?" /><published>2017-02-12T00:00:00-06:00</published><updated>2017-02-12T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/12/which-language-do-you-prefer</id><content type="html" xml:base="http://localhost:4000/2017/02/12/which-language-do-you-prefer">&lt;p&gt;Currently I have been hitting JavaScript pretty hard but I’m into PHP, Python, ColdFusion, C#. I think all languages are cool! :]&lt;/p&gt;</content><category term="php" /><category term="python" /><category term="language" /><category term="about" /><category term="life" /><summary type="html">Currently I have been hitting JavaScript pretty hard but I’m into PHP, Python, ColdFusion, C#. I think all languages are cool! :]</summary></entry><entry><title type="html">Where did you learn to use SQL?</title><link href="http://localhost:4000/2017/02/12/where-can-i-learn-to-use-sql" rel="alternate" type="text/html" title="Where did you learn to use SQL?" /><published>2017-02-12T00:00:00-06:00</published><updated>2017-02-12T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/12/where-can-i-learn-to-use-sql</id><content type="html" xml:base="http://localhost:4000/2017/02/12/where-can-i-learn-to-use-sql">&lt;p&gt;Learned the basics of SQL from w3schools.com. What you learn from the basic tutorials can usually get you through just about anything. I did not get very good with it until using it everyday at work and asking lots of questions to people much more skilled than me.&lt;/p&gt;</content><category term="sql" /><category term="learn" /><category term="start" /><category term="database" /><summary type="html">Learned the basics of SQL from w3schools.com. What you learn from the basic tutorials can usually get you through just about anything. I did not get very good with it until using it everyday at work and asking lots of questions to people much more skilled than me.</summary></entry><entry><title type="html">Haha where you from man!</title><link href="http://localhost:4000/2017/02/12/where-are-you-from" rel="alternate" type="text/html" title="Haha where you from man!" /><published>2017-02-12T00:00:00-06:00</published><updated>2017-02-12T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/12/where-are-you-from</id><content type="html" xml:base="http://localhost:4000/2017/02/12/where-are-you-from">&lt;p&gt;US city of Chicago :]&lt;/p&gt;</content><category term="about" /><category term="life" /><category term="chicago" /><summary type="html">US city of Chicago :]</summary></entry></feed>
