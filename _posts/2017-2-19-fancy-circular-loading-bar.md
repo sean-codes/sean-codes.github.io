@@ -2,8 +2,8 @@
 layout: post
 tags: [codepen, material, css, coding, nojs]
 from: 
-title: Pure CSS Material Design FAB Button Burst Modal
-type: Codepen daily 29
+title: Fancy Loading Bar with scale, rotate, and translate
+type: Codepen daily 31
 ---
 
 This is a codepen of a fancy circular loading bar. Where dots are displayed in a cricle and grow! Also with a line underneith. These are some notes I took while making the project!
