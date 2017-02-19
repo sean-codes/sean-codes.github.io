@@ -48,5 +48,5 @@ To do the animation I used `transform:scale(x)` and `animation-delay` I put the 
 
 Here is the codepen please take a look let me know if you have any questions or need any help!
 
-<p data-height="350" data-theme-id="dark" data-slug-hash="RKzNWj" data-default-tab="css,result" data-user="sean_codes" data-embed-version="2" data-pen-title="Front End Day 31 - Loading Bar with bubbles" class="codepen">See the Pen <a href="http://codepen.io/sean_codes/pen/RKzNWj/">Front End Day 31 - Loading Bar with bubbles</a> by Sean Codes (<a href="http://codepen.io/sean_codes">@sean_codes</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="400" data-theme-id="dark" data-slug-hash="RKzNWj" data-default-tab="css,result" data-user="sean_codes" data-embed-version="2" data-pen-title="Front End Day 31 - Loading Bar with bubbles" class="codepen">See the Pen <a href="http://codepen.io/sean_codes/pen/RKzNWj/">Front End Day 31 - Loading Bar with bubbles</a> by Sean Codes (<a href="http://codepen.io/sean_codes">@sean_codes</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
