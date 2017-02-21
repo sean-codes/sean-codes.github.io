@@ -3,7 +3,7 @@ layout: post
 tags: [codepen, material, css, coding, nojs]
 from: 
 title: Toggle switches, radio buttons, and checkbox styles, using only CSS
-type: Codepen daily 31
+type: Codepen daily 33
 ---
 
 This is a codepen of interesting radio, checkbox, and toggle switches! I just wanted to share with you my notes of making this project
