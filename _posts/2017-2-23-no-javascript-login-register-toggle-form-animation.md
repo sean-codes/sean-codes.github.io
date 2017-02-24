@@ -1,12 +1,12 @@
 ---
 layout: post
-tags: [codepen, material, css, coding, nojs]
+tags: [codepen, material, css, coding, nojs, login, form]
 from: 
 title: Toggle login and register form single page app animation, using only CSS
 type: Codepen daily 35
 ---
 
-This is a codepen of switching a login and register form with a animation where the first slides out maintaining the front position then forces a lower z-index to slide behind. These are my notes on the project:
+This is a codepen of switching a login and register form with a animation where the first slides out maintaining the front position then forces a lower z-index to slide behind. Just vanilla CSS. These are my notes on the project:
 
 ## The basics
 To do this switch I'm using two divs and two radios. To start I set the divs with a min-height and max-width and `margin:auto`. I create two animations for `slideIn` and `slideOut`. 
