@@ -1,5 +1,138 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-02-18T14:51:53-06:00</updated><id>http://localhost:4000//</id><title type="html">Sean Codes</title><subtitle>Hi! I'm a software developer in Chicago specializing in Web Development, Network programming, and 2D Game development.
-</subtitle><entry><title type="html">Pure CSS Material Design FAB Button Burst Modal</title><link href="http://localhost:4000/2017/02/18/material-fab-burst-modal-button-with-content" rel="alternate" type="text/html" title="Pure CSS Material Design FAB Button Burst Modal" /><published>2017-02-18T00:00:00-06:00</published><updated>2017-02-18T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/18/material-fab-burst-modal-button-with-content</id><content type="html" xml:base="http://localhost:4000/2017/02/18/material-fab-burst-modal-button-with-content">&lt;p&gt;This is a codepen of a material design FAB burst button. When you click the button it will burst and show the content. These are some notes I took while making this micro app.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-02-26T01:35:30-06:00</updated><id>http://localhost:4000//</id><title type="html">Sean Codes</title><subtitle>Hi! I'm a software developer in Chicago specializing in Web Development, Network programming, and 2D Game development.
+</subtitle><entry><title type="html">Toggle login and register form single page app animation, using only CSS</title><link href="http://localhost:4000/2017/02/23/no-javascript-login-register-toggle-form-animation" rel="alternate" type="text/html" title="Toggle login and register form single page app animation, using only CSS" /><published>2017-02-23T00:00:00-06:00</published><updated>2017-02-23T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/23/no-javascript-login-register-toggle-form-animation</id><content type="html" xml:base="http://localhost:4000/2017/02/23/no-javascript-login-register-toggle-form-animation">&lt;p&gt;This is a codepen of switching a login and register form with a animation where the first slides out maintaining the front position then forces a lower z-index to slide behind. Just vanilla CSS. These are my notes on the project:&lt;/p&gt;
+
+&lt;h2 id=&quot;the-basics&quot;&gt;The basics&lt;/h2&gt;
+&lt;p&gt;To do this switch I’m using two divs and two radios. To start I set the divs with a min-height and max-width and &lt;code class=&quot;highlighter-rouge&quot;&gt;margin:auto&lt;/code&gt;. I create two animations for &lt;code class=&quot;highlighter-rouge&quot;&gt;slideIn&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;slideOut&lt;/code&gt;. 
+When I have an input checked I use the slidein animation and use the slideout animation on the non checked.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;input.login + div,
+input.register + div{
+  transform:translateX(0px);
+  animation: 1s slideout;
+  z-index: 1;
+}
+
+input.login:checked + div,
+input.register:checked + div{
+  transform:translateX(0px);
+  animation: 1s slidein;
+  z-index:0;
+}
+
+ @keyframes moveout{
+   0%, 100%{ transform:translateX(0px); }
+   50%{ transform:translateX(-160px); }
+}
+
+@keyframes movein{
+   0%, 100%{transform:translateX(0px); }
+   50%{ transform:translateX(160px); }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;the-interesting-trick&quot;&gt;The interesting trick&lt;/h2&gt;
+&lt;p&gt;When I was makign this I could not find any information on swapping z-index in the animation and holding it without causing a flash when the z-index switched at first. To fix this I used an &lt;code class=&quot;highlighter-rouge&quot;&gt;animation-delay&lt;/code&gt; and set the z-index after the animation was halfway through!&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/* Inside the slide in add these */
+input.login:checked + div,
+input.register:checked + div{
+  animation: 1s slidein, 2s forceTop infinite;
+  animation-delay: 0s, 0.5s;
+}
+
+@keyframes forceTop{
+  from, to{z-index:2; }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;the-extras&quot;&gt;The extras&lt;/h2&gt;
+&lt;p&gt;I also added labels and opacity/background changing! I think if you are able to master the top section of this and get the slides functioning you should be able to add those features. The basics for those features revolve around the &lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt; selector. I sometimes select through multiple elements using it like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;input.login:checked + label + .form{
+  /* Do something to the form inside this div! */
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Please take a deeper look at the codepen and let me know if you need any help!&lt;/p&gt;
+
+&lt;p data-height=&quot;600&quot; data-theme-id=&quot;dark&quot; data-slug-hash=&quot;PpoOzr&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Front End Day - 35 - No JS Login Register toggle&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/PpoOzr/&quot;&gt;Front End Day - 35 - No JS Login Register toggle&lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content><category term="codepen" /><category term="material" /><category term="css" /><category term="coding" /><category term="nojs" /><category term="login" /><category term="form" /><summary type="html">This is a codepen of switching a login and register form with a animation where the first slides out maintaining the front position then forces a lower z-index to slide behind. Just vanilla CSS. These are my notes on the project:</summary></entry><entry><title type="html">Toggle switches, radio buttons, and checkbox styles, using only CSS</title><link href="http://localhost:4000/2017/02/21/pure-css-checkboxes-toggle-switch-radio" rel="alternate" type="text/html" title="Toggle switches, radio buttons, and checkbox styles, using only CSS" /><published>2017-02-21T00:00:00-06:00</published><updated>2017-02-21T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/21/pure-css-checkboxes-toggle-switch-radio</id><content type="html" xml:base="http://localhost:4000/2017/02/21/pure-css-checkboxes-toggle-switch-radio">&lt;p&gt;This is a codepen of interesting radio, checkbox, and toggle switches! I just wanted to share with you my notes of making this project&lt;/p&gt;
+
+&lt;h2 id=&quot;the-toggle-switch&quot;&gt;The toggle switch&lt;/h2&gt;
+
+&lt;p&gt;To do the toggle switch I used a &lt;code class=&quot;highlighter-rouge&quot;&gt;:after&lt;/code&gt; and the &lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt; selector! I wrapped the checkbox and label inside a div and created a separate label for displaying the text and the inner is going to draw the display. Hide the input and then use the label to draw the lane and the &lt;code class=&quot;highlighter-rouge&quot;&gt;after&lt;/code&gt; to draw the toggle switch. When the checkbox is checked move the toggle switch using &lt;code class=&quot;highlighter-rouge&quot;&gt;transform: translateX(45px)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;div.fancyToggle
+    label(for=&quot;toggle2&quot;) Toggle
+    div.toggle
+       input(type=&quot;checkbox&quot; id=&quot;toggle2&quot;)
+       label(for=&quot;toggle2&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;the-radio-switch&quot;&gt;The radio switch&lt;/h2&gt;
+
+&lt;p&gt;This one took a bit more trickery and most of it is just guessing numbers to get everything to fit correctly. This requires a wrapper div, and two of each label and input. Hide the radios. Use the wrapper to draw the lane. Then draw each label inside the lane on their sides one with the same color as the lane and the other a primary color when checked. I used &lt;code class=&quot;highlighter-rouge&quot;&gt;transform:scale()&lt;/code&gt; to make the effect!&lt;/p&gt;
+
+&lt;h2 id=&quot;checkboxes&quot;&gt;Checkboxes&lt;/h2&gt;
+
+&lt;p&gt;The checkbox did not require a wrapper but I used for positioning. First hide the checkbox. Then draw the label as the square. Then when checked use the &lt;code class=&quot;highlighter-rouge&quot;&gt;:after&lt;/code&gt; selector and draw a inner square with a primary color!&lt;/p&gt;
+
+&lt;p&gt;Please take a deeper look at the codepen and let me know if you need any help!&lt;/p&gt;
+
+&lt;p data-height=&quot;400&quot; data-theme-id=&quot;dark&quot; data-slug-hash=&quot;ygmNJO&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Front End Day 33 - Fancy Checkbox and Toggle Switches&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/ygmNJO/&quot;&gt;Front End Day 33 - Fancy Checkbox and Toggle Switches&lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content><category term="codepen" /><category term="material" /><category term="css" /><category term="coding" /><category term="nojs" /><summary type="html">This is a codepen of interesting radio, checkbox, and toggle switches! I just wanted to share with you my notes of making this project</summary></entry><entry><title type="html">Fancy Loading Bar with scale, rotate, and translate</title><link href="http://localhost:4000/2017/02/19/fancy-circular-loading-bar" rel="alternate" type="text/html" title="Fancy Loading Bar with scale, rotate, and translate" /><published>2017-02-19T00:00:00-06:00</published><updated>2017-02-19T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/19/fancy-circular-loading-bar</id><content type="html" xml:base="http://localhost:4000/2017/02/19/fancy-circular-loading-bar">&lt;p&gt;This is a codepen of a fancy circular loading bar. Where dots are displayed in a cricle and grow! Also with a line underneith. These are some notes I took while making the project!&lt;/p&gt;
+
+&lt;h2 id=&quot;the-html-pug&quot;&gt;The HTML (Pug)&lt;/h2&gt;
+&lt;p&gt;The mark up is a bit simple. We need 10 elements within a parent. With a chicle element within the 10 elements. This is because we want to simply use scale for smooth animations and also will be using translate and scale will also scale translates!&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.container
+   .bubbles
+      - for (var i = 0; i &amp;lt; 10; ++i)
+         .bubble
+            .circle
+   .bar
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;how-to-position-in-a-circle&quot;&gt;How to position in a circle&lt;/h2&gt;
+&lt;p&gt;To position the elements I used SCSS to look over 10 times and rotating then translating on the Y axis!&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@for $i from 0 to 15 {
+   .bubble:nth-child(#{$i}){
+      flex:1;
+      position:absolute;
+      display:inline-block;
+      margin:auto;
+      transform: rotateZ($i * 36deg) translateY(50px);
+   }
+   
+   /* Read below */
+   .bubble:nth-child(#{$i}) .circle{
+      animation-delay: $i * 0.1s; 
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;the-animation&quot;&gt;The animation&lt;/h2&gt;
+&lt;p&gt;To do the animation I used &lt;code class=&quot;highlighter-rouge&quot;&gt;transform:scale(x)&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;animation-delay&lt;/code&gt; I put the delay inside the same loop above! I’m only animating on the child of the bubble the &lt;code class=&quot;highlighter-rouge&quot;&gt;.circle&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@keyframes pulse{
+   0%{ transform: scale(0.2); }
+   50%{ transform: scale(1); opacity:0.75; }
+   100%{ transform: scale(0.2); }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Here is the codepen please take a look let me know if you have any questions or need any help!&lt;/p&gt;
+
+&lt;p data-height=&quot;400&quot; data-theme-id=&quot;dark&quot; data-slug-hash=&quot;RKzNWj&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Front End Day 31 - Loading Bar with bubbles&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/RKzNWj/&quot;&gt;Front End Day 31 - Loading Bar with bubbles&lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content><category term="codepen" /><category term="material" /><category term="css" /><category term="coding" /><category term="nojs" /><summary type="html">This is a codepen of a fancy circular loading bar. Where dots are displayed in a cricle and grow! Also with a line underneith. These are some notes I took while making the project!</summary></entry><entry><title type="html">Pure CSS Material Design FAB Button Burst Modal</title><link href="http://localhost:4000/2017/02/18/material-fab-burst-modal-button-with-content" rel="alternate" type="text/html" title="Pure CSS Material Design FAB Button Burst Modal" /><published>2017-02-18T00:00:00-06:00</published><updated>2017-02-18T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/18/material-fab-burst-modal-button-with-content</id><content type="html" xml:base="http://localhost:4000/2017/02/18/material-fab-burst-modal-button-with-content">&lt;p&gt;This is a codepen of a material design FAB burst button. When you click the button it will burst and show the content. These are some notes I took while making this micro app.&lt;/p&gt;
 
 &lt;h2 id=&quot;positioning-the-button&quot;&gt;Positioning the button&lt;/h2&gt;
 &lt;p&gt;To position the button I’m using &lt;code class=&quot;highlighter-rouge&quot;&gt;position:relative&lt;/code&gt; on the container and &lt;code class=&quot;highlighter-rouge&quot;&gt;position:absolute&lt;/code&gt; on the button. Then just a &lt;code class=&quot;highlighter-rouge&quot;&gt;buttom:y&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;right:x&lt;/code&gt;&lt;/p&gt;
@@ -154,4 +287,4 @@ When saving or adding a new job when you hit the save button the data is updated
 &lt;p data-height=&quot;540&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;qRgEOJ&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Front End 25 - Material Design Floating Action Button&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/qRgEOJ/&quot;&gt;Front End 25 - Material Design Floating Action Button&lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
 &lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;I hope this helps you please let me know if you have any questions!&lt;/p&gt;</content><category term="codepen" /><category term="material" /><category term="frontend" /><category term="animation" /><summary type="html">This is a pen for a floating action button using CSS. This could be done using the checkbox trick but I felt using JavaScript will make it flow better because the action button already required a bunch of CSS.</summary></entry><entry><title type="html">Are you a programmer? How old are you?</title><link href="http://localhost:4000/2017/02/13/are-you-a-programmer-how-old" rel="alternate" type="text/html" title="Are you a programmer? How old are you?" /><published>2017-02-13T00:00:00-06:00</published><updated>2017-02-13T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/13/are-you-a-programmer-how-old</id><content type="html" xml:base="http://localhost:4000/2017/02/13/are-you-a-programmer-how-old">&lt;p&gt;Hi! Yes and I’m 23 :]&lt;/p&gt;</content><category term="life" /><category term="about" /><category term="age" /><summary type="html">Hi! Yes and I’m 23 :]</summary></entry><entry><title type="html">I want to use Xamarin for cross platform development. Isn’t wrapping web apps a little bit slow and doesn’t feel like a native app?</title><link href="http://localhost:4000/2017/02/12/xamarin-for-cross-platform-app-development" rel="alternate" type="text/html" title="I want to use Xamarin for cross platform development. Isn't wrapping web apps a little bit slow and doesn't feel like a native app?" /><published>2017-02-12T00:00:00-06:00</published><updated>2017-02-12T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/12/xamarin-for-cross-platform-app-development</id><content type="html" xml:base="http://localhost:4000/2017/02/12/xamarin-for-cross-platform-app-development">&lt;p&gt;JavaScript is pretty fast already and CSS can access the GPU. If you use the right tools and techniques you should not be able to tell the difference in a Web App and native.&lt;/p&gt;</content><category term="app" /><category term="webapp" /><category term="gamedev" /><category term="tools" /><category term="cordova" /><summary type="html">JavaScript is pretty fast already and CSS can access the GPU. If you use the right tools and techniques you should not be able to tell the difference in a Web App and native.</summary></entry><entry><title type="html">Which language do you prefer?</title><link href="http://localhost:4000/2017/02/12/which-language-do-you-prefer" rel="alternate" type="text/html" title="Which language do you prefer?" /><published>2017-02-12T00:00:00-06:00</published><updated>2017-02-12T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/12/which-language-do-you-prefer</id><content type="html" xml:base="http://localhost:4000/2017/02/12/which-language-do-you-prefer">&lt;p&gt;Currently I have been hitting JavaScript pretty hard but I’m into PHP, Python, ColdFusion, C#. I think all languages are cool! :]&lt;/p&gt;</content><category term="php" /><category term="python" /><category term="language" /><category term="about" /><category term="life" /><summary type="html">Currently I have been hitting JavaScript pretty hard but I’m into PHP, Python, ColdFusion, C#. I think all languages are cool! :]</summary></entry><entry><title type="html">Where did you learn to use SQL?</title><link href="http://localhost:4000/2017/02/12/where-can-i-learn-to-use-sql" rel="alternate" type="text/html" title="Where did you learn to use SQL?" /><published>2017-02-12T00:00:00-06:00</published><updated>2017-02-12T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/12/where-can-i-learn-to-use-sql</id><content type="html" xml:base="http://localhost:4000/2017/02/12/where-can-i-learn-to-use-sql">&lt;p&gt;Learned the basics of SQL from w3schools.com. What you learn from the basic tutorials can usually get you through just about anything. I did not get very good with it until using it everyday at work and asking lots of questions to people much more skilled than me.&lt;/p&gt;</content><category term="sql" /><category term="learn" /><category term="start" /><category term="database" /><summary type="html">Learned the basics of SQL from w3schools.com. What you learn from the basic tutorials can usually get you through just about anything. I did not get very good with it until using it everyday at work and asking lots of questions to people much more skilled than me.</summary></entry><entry><title type="html">Haha where you from man!</title><link href="http://localhost:4000/2017/02/12/where-are-you-from" rel="alternate" type="text/html" title="Haha where you from man!" /><published>2017-02-12T00:00:00-06:00</published><updated>2017-02-12T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/12/where-are-you-from</id><content type="html" xml:base="http://localhost:4000/2017/02/12/where-are-you-from">&lt;p&gt;US city of Chicago :]&lt;/p&gt;</content><category term="about" /><category term="life" /><category term="chicago" /><summary type="html">US city of Chicago :]</summary></entry></feed>
+&lt;p&gt;I hope this helps you please let me know if you have any questions!&lt;/p&gt;</content><category term="codepen" /><category term="material" /><category term="frontend" /><category term="animation" /><summary type="html">This is a pen for a floating action button using CSS. This could be done using the checkbox trick but I felt using JavaScript will make it flow better because the action button already required a bunch of CSS.</summary></entry><entry><title type="html">Are you a programmer? How old are you?</title><link href="http://localhost:4000/2017/02/13/are-you-a-programmer-how-old" rel="alternate" type="text/html" title="Are you a programmer? How old are you?" /><published>2017-02-13T00:00:00-06:00</published><updated>2017-02-13T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/13/are-you-a-programmer-how-old</id><content type="html" xml:base="http://localhost:4000/2017/02/13/are-you-a-programmer-how-old">&lt;p&gt;Hi! Yes and I’m 23 :]&lt;/p&gt;</content><category term="life" /><category term="about" /><category term="age" /><summary type="html">Hi! Yes and I’m 23 :]</summary></entry><entry><title type="html">I want to use Xamarin for cross platform development. Isn’t wrapping web apps a little bit slow and doesn’t feel like a native app?</title><link href="http://localhost:4000/2017/02/12/xamarin-for-cross-platform-app-development" rel="alternate" type="text/html" title="I want to use Xamarin for cross platform development. Isn't wrapping web apps a little bit slow and doesn't feel like a native app?" /><published>2017-02-12T00:00:00-06:00</published><updated>2017-02-12T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/12/xamarin-for-cross-platform-app-development</id><content type="html" xml:base="http://localhost:4000/2017/02/12/xamarin-for-cross-platform-app-development">&lt;p&gt;JavaScript is pretty fast already and CSS can access the GPU. If you use the right tools and techniques you should not be able to tell the difference in a Web App and native.&lt;/p&gt;</content><category term="app" /><category term="webapp" /><category term="gamedev" /><category term="tools" /><category term="cordova" /><summary type="html">JavaScript is pretty fast already and CSS can access the GPU. If you use the right tools and techniques you should not be able to tell the difference in a Web App and native.</summary></entry></feed>

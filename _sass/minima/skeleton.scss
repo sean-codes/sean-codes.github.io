@@ -40,16 +40,22 @@
   width: 100%;
   float: left;
   box-sizing: border-box; }
-
+  .hide-medium{
+      display:none;
+  }
+  .show-medium{
+      display:block;
+  }
 /* For devices larger than 400px */
 @media (min-width: 400px) {
   .container {
     width: 85%;
     padding: 0; }
+
 }
 
 /* For devices larger than 550px */
-@media (min-width: 550px) {
+@media (min-width: 600px) {
   .container {
     width: 80%; }
   .column,
@@ -109,9 +115,15 @@
 
   .offset-by-one-half.column,
   .offset-by-one-half.columns     { margin-left: 52%; }
-
 }
-
+@media (min-width: 850px) {
+    .hide-medium{
+        display:block;
+    }
+    .show-medium{
+        display:none;
+    }
+}
 
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

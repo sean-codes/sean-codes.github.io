@@ -88,16 +88,32 @@ img{
     border-radius:4px;
     padding:20px;
 }
-
+.badgebar{
+    display:flex;
+}
 .badge{
-    color:white;
+    flex:1;
+    margin:auto;
+    color:black;
+    height:100%;
+    box-sizing:border-box;
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    max-width:25%;
 }
-.badge:hover{
-    color:white;
+
+.badge a{
+    flex:2;
+    padding:0px 15%;
+    display:inline-block;
 }
+
 .badge img{
-    width:32px;
-    height:32px;
+    width:100%;
+    height:100%;
+    flex:2;
+    margin:auto;
 }
 .badge:hover img{
     opacity:0.85;
@@ -128,7 +144,7 @@ img{
 
 .recent-posts{
     color:white;
-    border:1px solid #999; border-radius:4px; padding:10px 20px; margin-top:10px; background:#c11943; clear:both; margin-bottom:25px;
+    border:1px solid #999; border-radius:4px; padding:10px 20px; margin-top:20px; background:#c11943; clear:both; margin-bottom:25px;
 }
 .recent-posts h6{
     margin:10px 0px;
