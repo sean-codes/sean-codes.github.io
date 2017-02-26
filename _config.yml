@@ -20,7 +20,7 @@ description: > #
   Hi! I'm a software developer in Chicago specializing in Web Development, Network programming, and 2D Game development.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://sean-codes.github.io"
-codepen_username: sean-codes
+codepen_username: sean_codes
 github_username:  sean-codes
 instagram_username: sean_codes
 permalink: /:categories/:year/:month/:day/:title
