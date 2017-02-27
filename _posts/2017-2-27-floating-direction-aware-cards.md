@@ -53,7 +53,7 @@ The effect works by using the `~` selector and `z-index`. What we do it create a
 ## The effect simply
 Here is a simple example of usine the effect with four corners!
 
-<p data-height="300" data-theme-id="dark" data-slug-hash="wgXNvv" data-default-tab="css,result" data-user="sean_codes" data-embed-version="2" data-pen-title="Practice Direction Aware" class="codepen">See the Pen <a href="http://codepen.io/sean_codes/pen/wgXNvv/">Practice Direction Aware</a> by Sean Codes (<a href="http://codepen.io/sean_codes">@sean_codes</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="350" data-theme-id="dark" data-slug-hash="wgXNvv" data-default-tab="css,result" data-user="sean_codes" data-embed-version="2" data-pen-title="Practice Direction Aware" class="codepen">See the Pen <a href="http://codepen.io/sean_codes/pen/wgXNvv/">Practice Direction Aware</a> by Sean Codes (<a href="http://codepen.io/sean_codes">@sean_codes</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ## Using SCSS to enhance the effect
