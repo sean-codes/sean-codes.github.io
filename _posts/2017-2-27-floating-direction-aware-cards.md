@@ -2,8 +2,8 @@
 layout: post
 tags: [codepen, material, css, coding, nojs]
 from: 
-title: Toggle switches, radio buttons, and checkbox styles, using only CSS
-type: Codepen daily 33
+title: Classy Floating direction aware cards with no JavaScript only CSS
+type: Codepen daily 36
 ---
 
 This is a codepen of floating direction aware cards! The effect i really interesting. These are my notes on the subject:
@@ -21,6 +21,7 @@ The effect works by using the `~` selector and `z-index`. What we do it create a
        div.plane Mouse on me!
 
 ##The basic CSS
+
     /* The container */
     .contain {
        width:200px;
@@ -51,6 +52,7 @@ The effect works by using the `~` selector and `z-index`. What we do it create a
 
 ##The effect simply
 Here is a simple example of usine the effect with four corners!
+
 <p data-height="300" data-theme-id="dark" data-slug-hash="wgXNvv" data-default-tab="css,result" data-user="sean_codes" data-embed-version="2" data-pen-title="Practice Direction Aware" class="codepen">See the Pen <a href="http://codepen.io/sean_codes/pen/wgXNvv/">Practice Direction Aware</a> by Sean Codes (<a href="http://codepen.io/sean_codes">@sean_codes</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
