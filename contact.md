@@ -1,6 +1,6 @@
 ---
 layout: contact
-title: Contact
+title: Sean Codes - Contact
 permalink: /contact/
 ---
 
