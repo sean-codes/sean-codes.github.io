@@ -1,5 +1,143 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-02-26T01:39:54-06:00</updated><id>http://localhost:4000//</id><title type="html">Sean Codes</title><subtitle>Hi! I'm a software developer in Chicago specializing in Web Development, Network programming, and 2D Game development.
-</subtitle><entry><title type="html">Toggle login and register form single page app animation, using only CSS</title><link href="http://localhost:4000/2017/02/23/no-javascript-login-register-toggle-form-animation" rel="alternate" type="text/html" title="Toggle login and register form single page app animation, using only CSS" /><published>2017-02-23T00:00:00-06:00</published><updated>2017-02-23T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/23/no-javascript-login-register-toggle-form-animation</id><content type="html" xml:base="http://localhost:4000/2017/02/23/no-javascript-login-register-toggle-form-animation">&lt;p&gt;This is a codepen of switching a login and register form with a animation where the first slides out maintaining the front position then forces a lower z-index to slide behind. Just vanilla CSS. These are my notes on the project:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-03-01T18:27:46-06:00</updated><id>http://localhost:4000//</id><title type="html">Sean Codes</title><subtitle>Hi! I'm a software developer in Chicago specializing in Web Development, Network programming, and 2D Game development.
+</subtitle><entry><title type="html">Interesting live typing title header text</title><link href="http://localhost:4000/2017/03/01/live-typing-title-header-text" rel="alternate" type="text/html" title="Interesting live typing title header text" /><published>2017-03-01T00:00:00-06:00</published><updated>2017-03-01T00:00:00-06:00</updated><id>http://localhost:4000/2017/03/01/live-typing-title-header-text</id><content type="html" xml:base="http://localhost:4000/2017/03/01/live-typing-title-header-text">&lt;p&gt;Hi! This is a simple pen for doing live typing title text. These are my notes on the project:&lt;/p&gt;
+
+&lt;h2 id=&quot;how-this-works&quot;&gt;How this works&lt;/h2&gt;
+&lt;p&gt;This pen is an easy pen that uses a &lt;code class=&quot;highlighter-rouge&quot;&gt;setTimeout&lt;/code&gt; to basically flip from typing and backspacing and in between switch words.&lt;/p&gt;
+
+&lt;h2 id=&quot;set-up&quot;&gt;Set up&lt;/h2&gt;
+
+&lt;p&gt;The html&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;!-- We will insert out typed text into this span! --&amp;gt;
+&amp;lt;h1&amp;gt;Title &amp;lt;span id=&quot;typed&quot;&amp;gt;&amp;lt;/h1&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I created a few variables.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;words = ['word1', 'word2', 'word3'] //Our words
+index = 0 //Keep track of the word we are using
+pos = 0 //How many letters we have typed
+typed = '' //Hold the word we are typing
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A few functions&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; type() //Will add a letter into the typed variable
+ backspace() //Will remove a letter from the typed variable
+ render() //We set the title to the typed variable
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now each time I type I will add a letter to the &lt;code class=&quot;highlighter-rouge&quot;&gt;typed&lt;/code&gt; variable and add &lt;code class=&quot;highlighter-rouge&quot;&gt;++&lt;/code&gt; to the &lt;code class=&quot;highlighter-rouge&quot;&gt;pos&lt;/code&gt; variable. When I do backspace I do the opposite. After running either of those functions I will call render().&lt;/p&gt;
+
+&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
+
+&lt;p&gt;Please take a look at the codepen and let me know if you need any help!&lt;/p&gt;
+
+&lt;p data-height=&quot;265&quot; data-theme-id=&quot;dark&quot; data-slug-hash=&quot;WpQeJy&quot; data-default-tab=&quot;js,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Front End Day 38.1 - Typing Header &quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/WpQeJy/&quot;&gt;Front End Day 38.1 - Typing Header &lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content><category term="codepen" /><category term="title" /><category term="javascript" /><category term="title" /><category term="frontend" /><summary type="html">Hi! This is a simple pen for doing live typing title text. These are my notes on the project:</summary></entry><entry><title type="html">Classy Floating direction aware cards with no JavaScript only CSS</title><link href="http://localhost:4000/2017/02/27/floating-direction-aware-cards" rel="alternate" type="text/html" title="Classy Floating direction aware cards with no JavaScript only CSS" /><published>2017-02-27T00:00:00-06:00</published><updated>2017-02-27T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/27/floating-direction-aware-cards</id><content type="html" xml:base="http://localhost:4000/2017/02/27/floating-direction-aware-cards">&lt;p&gt;This is a codepen of floating direction aware cards! The effect i really interesting. These are my notes on the subject:&lt;/p&gt;
+
+&lt;h2 id=&quot;the-basics-of-direction-awareness&quot;&gt;The basics of direction awareness&lt;/h2&gt;
+&lt;p&gt;The effect works by using the &lt;code class=&quot;highlighter-rouge&quot;&gt;~&lt;/code&gt; selector and &lt;code class=&quot;highlighter-rouge&quot;&gt;z-index&lt;/code&gt;. What we do it create a container then inside we lay target squares or corners and then final square or the ‘plane’. When we hover any of the target squares we will use the &lt;code class=&quot;highlighter-rouge&quot;&gt;~&lt;/code&gt; selector to select the plain and then rotate the x and y towards that direction&lt;/p&gt;
+
+&lt;h2 id=&quot;the-basic-html&quot;&gt;The basic html&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; div.contain
+   div.corner.c1
+   div.corner.c2
+   div.corner.c3
+   div.corner.c4
+   div.plane Mouse on me!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;the-basic-css&quot;&gt;The basic CSS&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/* The container */
+.contain {
+   width:200px;
+   height:200px;
+   margin:auto;
+   position:relative;
+   perspective:400px;
+   display:flex;
+   flex-wrap:wrap;
+}
+
+/* The corners */
+.contain .corner {
+   flex: 1;
+   min-width:50%;
+   height:50%;
+   padding:0px;
+   float:left;
+   transform-style:preserve-3d;
+   transition: 1s;
+}
+
+/* Selecting the plain on hover of a target */
+.contain .corner.c1:hover ~ .plane { transform: rotateY(-10deg) rotateX(10deg); }
+.contain .corner.c2:hover ~ .plane { transform: rotateY( 10deg) rotateX(10deg); }
+.contain .corner.c3:hover ~ .plane { transform: rotateY(-10deg) rotateX(-10deg); }
+.contain .corner.c4:hover ~ .plane { transform: rotateY( 10deg) rotateX(-10deg); }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;the-effect-simply&quot;&gt;The effect simply&lt;/h2&gt;
+&lt;p&gt;Here is a simple example of usine the effect with four corners!&lt;/p&gt;
+
+&lt;p data-height=&quot;350&quot; data-theme-id=&quot;dark&quot; data-slug-hash=&quot;wgXNvv&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Practice Direction Aware&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/wgXNvv/&quot;&gt;Practice Direction Aware&lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;using-scss-to-enhance-the-effect&quot;&gt;Using SCSS to enhance the effect&lt;/h2&gt;
+
+&lt;p&gt;By using SCSS we can use math to help us create more target points. I noticed if you make the number to high it will actually make the effect very jittery. I found 2-5 wide to be the best! take a look at the below to see the mixin I used to make the effect for tall, wide, and square cards!&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; @mixin targetPractice($class, $w, $h){
+    $w: $w;
+    $h: $h;
+    $max_angle: 20deg;
+    $pos: 0;
+
+    #{$class} .target{
+       min-width:100%/$w;
+       min-height:100%/$h;
+       z-index:2;
+
+       &amp;amp;:hover{
+          ccbackground:#ccc;
+       }
+    }
+
+    //Double looping is that even legal?
+    @for $cur_h from 1 to $h+1 {
+       @for $cur_w from 1 to $w+1{
+          $pos: $pos + 1;
+          $h_tilt: (ceil($h/2) - $cur_h)/$h * $max_angle;
+          $w_tilt: (ceil($w/2) - $cur_w)/$w * $max_angle;
+          #{$class} .target:nth-child(#{$pos}) {
+             &amp;amp;:hover ~ .card{
+                transform:rotateY($w_tilt) rotateX(-$h_tilt);
+                &amp;amp; .inside{
+                   box-shadow:0px 0px 30px rgba(0, 0, 0, 1);
+                }
+             }
+          }
+       }
+    }
+ }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;NOTE: This effect doesnt require SCSS but it will be useful for staying organized and mathmatically enhancing the effect.
+Please take a deeper look at the codepen and let me know if you need any help!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p data-height=&quot;500&quot; data-theme-id=&quot;dark&quot; data-slug-hash=&quot;jBEBpz&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Front End Day 36 - Classy Floating direction aware cards&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/jBEBpz/&quot;&gt;Front End Day 36 - Classy Floating direction aware cards&lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content><category term="codepen" /><category term="material" /><category term="css" /><category term="coding" /><category term="nojs" /><summary type="html">This is a codepen of floating direction aware cards! The effect i really interesting. These are my notes on the subject:</summary></entry><entry><title type="html">Toggle login and register form single page app animation, using only CSS</title><link href="http://localhost:4000/2017/02/23/no-javascript-login-register-toggle-form-animation" rel="alternate" type="text/html" title="Toggle login and register form single page app animation, using only CSS" /><published>2017-02-23T00:00:00-06:00</published><updated>2017-02-23T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/23/no-javascript-login-register-toggle-form-animation</id><content type="html" xml:base="http://localhost:4000/2017/02/23/no-javascript-login-register-toggle-form-animation">&lt;p&gt;This is a codepen of switching a login and register form with a animation where the first slides out maintaining the front position then forces a lower z-index to slide behind. Just vanilla CSS. These are my notes on the project:&lt;/p&gt;
 
 &lt;h2 id=&quot;the-basics&quot;&gt;The basics&lt;/h2&gt;
 &lt;p&gt;To do this switch I’m using two divs and two radios. To start I set the divs with a min-height and max-width and &lt;code class=&quot;highlighter-rouge&quot;&gt;margin:auto&lt;/code&gt;. I create two animations for &lt;code class=&quot;highlighter-rouge&quot;&gt;slideIn&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;slideOut&lt;/code&gt;. 
@@ -287,4 +425,4 @@ When saving or adding a new job when you hit the save button the data is updated
 &lt;p data-height=&quot;540&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;qRgEOJ&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Front End 25 - Material Design Floating Action Button&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/qRgEOJ/&quot;&gt;Front End 25 - Material Design Floating Action Button&lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
 &lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;I hope this helps you please let me know if you have any questions!&lt;/p&gt;</content><category term="codepen" /><category term="material" /><category term="frontend" /><category term="animation" /><summary type="html">This is a pen for a floating action button using CSS. This could be done using the checkbox trick but I felt using JavaScript will make it flow better because the action button already required a bunch of CSS.</summary></entry><entry><title type="html">Are you a programmer? How old are you?</title><link href="http://localhost:4000/2017/02/13/are-you-a-programmer-how-old" rel="alternate" type="text/html" title="Are you a programmer? How old are you?" /><published>2017-02-13T00:00:00-06:00</published><updated>2017-02-13T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/13/are-you-a-programmer-how-old</id><content type="html" xml:base="http://localhost:4000/2017/02/13/are-you-a-programmer-how-old">&lt;p&gt;Hi! Yes and I’m 23 :]&lt;/p&gt;</content><category term="life" /><category term="about" /><category term="age" /><summary type="html">Hi! Yes and I’m 23 :]</summary></entry><entry><title type="html">I want to use Xamarin for cross platform development. Isn’t wrapping web apps a little bit slow and doesn’t feel like a native app?</title><link href="http://localhost:4000/2017/02/12/xamarin-for-cross-platform-app-development" rel="alternate" type="text/html" title="I want to use Xamarin for cross platform development. Isn't wrapping web apps a little bit slow and doesn't feel like a native app?" /><published>2017-02-12T00:00:00-06:00</published><updated>2017-02-12T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/12/xamarin-for-cross-platform-app-development</id><content type="html" xml:base="http://localhost:4000/2017/02/12/xamarin-for-cross-platform-app-development">&lt;p&gt;JavaScript is pretty fast already and CSS can access the GPU. If you use the right tools and techniques you should not be able to tell the difference in a Web App and native.&lt;/p&gt;</content><category term="app" /><category term="webapp" /><category term="gamedev" /><category term="tools" /><category term="cordova" /><summary type="html">JavaScript is pretty fast already and CSS can access the GPU. If you use the right tools and techniques you should not be able to tell the difference in a Web App and native.</summary></entry></feed>
+&lt;p&gt;I hope this helps you please let me know if you have any questions!&lt;/p&gt;</content><category term="codepen" /><category term="material" /><category term="frontend" /><category term="animation" /><summary type="html">This is a pen for a floating action button using CSS. This could be done using the checkbox trick but I felt using JavaScript will make it flow better because the action button already required a bunch of CSS.</summary></entry></feed>
