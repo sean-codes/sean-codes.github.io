@@ -33,7 +33,7 @@ A few functions
 
 Now each time I type I will add a letter to the `typed` variable and add `++` to the `pos` variable. When I do backspace I do the opposite. After running either of those functions I will call render().
 
-##Example
+## Example
 
 Please take a deeper look at the codepen and let me know if you need any help! 
 
