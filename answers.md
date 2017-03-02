@@ -1,6 +1,6 @@
 ---
 layout: answers
-title: Answers
+title: Sean Codes - Answers
 permalink: /answers/
 ---
 
