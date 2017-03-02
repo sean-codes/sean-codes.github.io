@@ -14,16 +14,19 @@ This pen is an easy pen that uses a `setTimeout` to basically flip from typing a
 ## Set up
 
 The html
+
     <!-- We will insert out typed text into this span! -->
     <h1>Title <span id="typed"></h1>
 
 I created a few variables.
+
     words = ['word1', 'word2', 'word3'] //Our words
     index = 0 //Keep track of the word we are using
     pos = 0 //How many letters we have typed
     typed = '' //Hold the word we are typing
     
 A few functions
+
      type() //Will add a letter into the typed variable
      backspace() //Will remove a letter from the typed variable
      render() //We set the title to the typed variable
