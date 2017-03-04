@@ -26,6 +26,7 @@ What I did was create a list of all the animations I wanted to use. The naming c
     sW_aH = Keep width at 100% and animate the height
     
 Code: 
+
     /* A weird set of keyframes that can do anything */
     @keyframes aW_sH{ from{height:100%; width:0%;} to{height:100%; width:100%;} }
     @keyframes sW_aH{ from{width:100%; height:0%;} to{width:100%; height:100%;} }
