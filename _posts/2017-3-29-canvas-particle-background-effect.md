@@ -51,12 +51,56 @@ Just incase you're not bringing your own! :]
     }
 
 ## PART1: Drawing and moving the particles
+We create a draw function. Then we will use `fillRect` to draw the particles. Also call the `check_points` function we will create below!
 
     requestAnimationFrame(draw)
     function draw(){
        requestAnimationFrame(draw)
        ctx.fillStyle = '#222'
        ctx.fillRect(0, 0, canvas.width, canvas.height)
-    
+       
+       //Loop each particle
+       for(var i = 0; i < partCnt; i++){
+         
+          //Draw the particle
+          particles[i].x += particles[i].xSpeed;
+          particles[i].y += particles[i].ySpeed;
+          ctx.fillStyle = "#555"
+          ctx.fillRect(particles[i].x,particles[i].y,particles[i].size,particles[i].size)
+          
+          //How we will draw the lines
+          check_points(particles[i].x, particles[i].y, particles[i].size, particles[i].range)
+          
+          //This will flip the particles across if they go out of bounds!
+          if(particles[i].x > canvas.width)
+             particles[i].x = 0
+          if(particles[i].x < 0)
+             particles[i].x = canvas.width
+          if(particles[i].y > canvas.height)
+             particles[i].y = 0
+          if(particles[i].y < 0)
+             particles[i].y = canvas.height
+       }
     }
 
+## PART2: Drawing the lines
+This will do a distance calculation on each particle to see if we are within range of another particles. If we are then draw a line between them.
+
+    function check_points(x, y, size, range){
+       for(var i = 0; i < partCnt; i++){
+          if(distance(x, y, particles[i].x, particles[i].y) < range){
+             ctx.beginPath()
+             ctx.moveTo(x+size/2,y+size/2)
+             ctx.lineTo(particles[i].x+particles[i].size/2,particles[i].y+particles[i].size/2)
+             ctx.strokeStyle = "#991100"
+             ctx.stroke()
+          }
+       }
+    }
+    
+## PART3: the distance function
+Again if you did not bring your own! 
+
+    function distance(x1, y1, x2, y2){
+       return Math.sqrt(Math.pow((x2 - x1),2) + Math.pow((y2 - y1),2) )
+    }
