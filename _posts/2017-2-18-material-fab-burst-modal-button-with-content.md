@@ -1,12 +1,12 @@
 ---
 layout: post
 tags: [codepen, material, css, coding, nojs]
-from: 
+from:
 title: Pure CSS Material Design FAB Button Burst Modal
 type: Codepen daily 29
 ---
 
-This is a codepen of a material design FAB burst button. When you click the button it will burst and show the content. These are some notes I took while making this micro app.
+A Material design FAB burst button. When you click the button it will burst and show the content. These are some notes I took while making this micro app.
 
 ## Positioning the button
 To position the button I'm using `position:relative` on the container and `position:absolute` on the button. Then just a `buttom:y`, `right:x`

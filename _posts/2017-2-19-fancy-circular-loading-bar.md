@@ -1,12 +1,12 @@
 ---
 layout: post
 tags: [codepen, material, css, coding, nojs]
-from: 
+from:
 title: Fancy Loading Bar with scale, rotate, and translate
 type: Codepen daily 31
 ---
 
-This is a codepen of a fancy circular loading bar. Where dots are displayed in a cricle and grow! Also with a line underneith. These are some notes I took while making the project!
+Circular loading bar. Where dots are displayed in a cricle and grow! Also with a line underneith. These are some notes I took while making the project!
 
 ## The HTML (Pug)
 The mark up is a bit simple. We need 10 elements within a parent. With a chicle element within the 10 elements. This is because we want to simply use scale for smooth animations and also will be using translate and scale will also scale translates!
@@ -30,10 +30,10 @@ To position the elements I used SCSS to look over 10 times and rotating then tra
           margin:auto;
           transform: rotateZ($i * 36deg) translateY(50px);
        }
-       
+
        /* Read below */
        .bubble:nth-child(#{$i}) .circle{
-          animation-delay: $i * 0.1s; 
+          animation-delay: $i * 0.1s;
        }
     }
 

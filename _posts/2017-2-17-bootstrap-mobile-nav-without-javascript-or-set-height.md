@@ -6,7 +6,7 @@ title: Bootstrap Style Mobile Nav without JavaScript or Static Height
 type: Codepen Daily 28
 ---
 
-Hi! This is a basic template for a responsive navigation for desktop/tabel and mobile phone. The mobile phone will go full width and drop down the way bootstrap does. The desktop version displays the buttons at the top with the primary button floated to the right. These are some notes from the project:
+Basic template for a responsive navigation for desktop/tabel and mobile phone. The mobile phone will go full width and drop down the way bootstrap does. The desktop version displays the buttons at the top with the primary button floated to the right. These are some notes from the project:
 
 ## Top nav floating primary without clearfix
 Since the non floated buttons where switched to `display:inline-block` we don't need to use a clearfix. If you want the buttons spaced to match the outer padding I would `float:right` on the nav list elements. Then use a simple clear fix (IE 8+):

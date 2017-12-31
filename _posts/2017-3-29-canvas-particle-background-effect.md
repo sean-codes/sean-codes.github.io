@@ -1,12 +1,12 @@
 ---
 layout: post
 tags: [codepen, title, javascript, title, frontend]
-from: 
+from:
 title: Canvas Particle Background Connection
 type: Codepen Notes
 ---
 
-Hi! These are some notes on doing an effect like this!
+Some notes on creating a particle connection effect!
 
 <p data-height="400" data-theme-id="dark" data-slug-hash="OpoQEp" data-default-tab="js,result" data-user="sean_codes" data-embed-version="2" data-pen-title="Front End Canvas Particle Connection" class="codepen">See the Pen <a href="http://codepen.io/sean_codes/pen/OpoQEp/">Front End Canvas Particle Connection</a> by Sean Codes (<a href="http://codepen.io/sean_codes">@sean_codes</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
@@ -27,7 +27,7 @@ All we need is a canvas element!
     canvas.height = body.offsetHeight
     var ctx = canvas.getContext('2d')
     var particleCount = 100
-    
+
 ## Creating the particles
 
     partCnt = 100;
@@ -42,7 +42,7 @@ All we need is a canvas element!
           range: random_range(10, 75)
        }
     }
-    
+
 ## The random_range function
 Just incase you're not bringing your own! :]
 
@@ -58,19 +58,19 @@ We create a draw function. Then we will use `fillRect` to draw the particles. Al
        requestAnimationFrame(draw)
        ctx.fillStyle = '#222'
        ctx.fillRect(0, 0, canvas.width, canvas.height)
-       
+
        //Loop each particle
        for(var i = 0; i < partCnt; i++){
-         
+
           //Draw the particle
           particles[i].x += particles[i].xSpeed;
           particles[i].y += particles[i].ySpeed;
           ctx.fillStyle = "#555"
           ctx.fillRect(particles[i].x,particles[i].y,particles[i].size,particles[i].size)
-          
+
           //How we will draw the lines
           check_points(particles[i].x, particles[i].y, particles[i].size, particles[i].range)
-          
+
           //This will flip the particles across if they go out of bounds!
           if(particles[i].x > canvas.width)
              particles[i].x = 0
@@ -97,9 +97,9 @@ This will do a distance calculation on each particle to see if we are within ran
           }
        }
     }
-    
+
 ## PART3: the distance function
-Again if you did not bring your own! 
+Again if you did not bring your own!
 
     function distance(x1, y1, x2, y2){
        return Math.sqrt(Math.pow((x2 - x1),2) + Math.pow((y2 - y1),2) )

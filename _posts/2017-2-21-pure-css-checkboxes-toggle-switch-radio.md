@@ -1,12 +1,12 @@
 ---
 layout: post
 tags: [codepen, material, css, coding, nojs]
-from: 
+from:
 title: Toggle switches, radio buttons, and checkbox styles, using only CSS
 type: Codepen daily 33
 ---
 
-This is a codepen of interesting radio, checkbox, and toggle switches! I just wanted to share with you my notes of making this project
+Interesting radio, checkbox, and toggle switches! I just wanted to share with you my notes of making this project
 
 ## The toggle switch
 
@@ -26,7 +26,7 @@ This one took a bit more trickery and most of it is just guessing numbers to get
 
 The checkbox did not require a wrapper but I used for positioning. First hide the checkbox. Then draw the label as the square. Then when checked use the `:after` selector and draw a inner square with a primary color!
 
-Please take a deeper look at the codepen and let me know if you need any help! 
+Please take a deeper look at the codepen and let me know if you need any help!
 
 <p data-height="400" data-theme-id="dark" data-slug-hash="ygmNJO" data-default-tab="css,result" data-user="sean_codes" data-embed-version="2" data-pen-title="Front End Day 33 - Fancy Checkbox and Toggle Switches" class="codepen">See the Pen <a href="http://codepen.io/sean_codes/pen/ygmNJO/">Front End Day 33 - Fancy Checkbox and Toggle Switches</a> by Sean Codes (<a href="http://codepen.io/sean_codes">@sean_codes</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>

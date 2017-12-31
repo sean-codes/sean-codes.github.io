@@ -6,7 +6,7 @@ title: Creating a tool for handling backend cron jobs
 type: Codepen Daily
 ---
 
-This is a javascript heavy front end template I created for creating, deleting, and updating backend cron jobs. This uses no frameworks or plugins. Here are some notes:
+Javascript heavy front end template I created for creating, deleting, and updating backend cron jobs. This uses no frameworks or plugins. Here are some notes:
 
 ## Data storage
 The data is being stores in a JSON array. The id field is for when creating new jobs it will stay uniqie until hooked up to a database.

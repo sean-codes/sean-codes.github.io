@@ -1,12 +1,12 @@
 ---
 layout: post
 tags: [codepen, title, javascript, title, frontend]
-from: 
+from:
 title: Focus Pointer Events Toggle Trick
 type: Notes
 ---
 
-Hi! This is a bit about using the `focus` and `pointer-events` to make a css only toggle button!
+Bit abount using the `focus` and `pointer-events` to make a css only toggle button!
 
 <p data-height="200" data-theme-id="0" data-slug-hash="d0e5e3343bf7bf47e2e3abb99b317e76" data-default-tab="css,result" data-user="sean_codes" data-embed-version="2" data-pen-title="Simple Focus Pointer Events Example" class="codepen">See the Pen <a href="https://codepen.io/sean_codes/pen/d0e5e3343bf7bf47e2e3abb99b317e76/">Simple Focus Pointer Events Example</a> by Sean Codes (<a href="https://codepen.io/sean_codes">@sean_codes</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
@@ -37,8 +37,8 @@ Some extra styles for making it look button like! The only requirements is the `
          pointer-events:none;
          background:#465;
       }
-    
-Please take a look at the codepen and let me know if you need any help! 
+
+Please take a look at the codepen and let me know if you need any help!
 
 This is a pretty simple effect that I haven't found to much use in the wild but I find it extra convenient to use for demo and examples where I would normally use label and checkboxes for toggles!
 Here is a more interesting example :]
