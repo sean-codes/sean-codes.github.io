@@ -1,0 +1,7 @@
+<input class="u-full-width" type="text" id="search" onkeyup="search()" placeholder="Find an article"/>{% for answer in site.posts %}
+<section>
+  <h5><a class="post-link" href="{{ answer.url | relative_url }}">{{answer.title}}</a></h5>
+  <p>{% if answer.from %}<a href="https://instagram.com/{{question.from}}">@{{answer.from}}</a>: {%endif %} 
+    <div class="excerpt">{{answer.excerpt}}</div>
+  </p>
+</section>{% endfor %}

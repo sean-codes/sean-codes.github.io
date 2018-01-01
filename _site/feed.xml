@@ -1,5 +1,258 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-03-01T18:27:46-06:00</updated><id>http://localhost:4000//</id><title type="html">Sean Codes</title><subtitle>Hi! I'm a software developer in Chicago specializing in Web Development, Network programming, and 2D Game development.
-</subtitle><entry><title type="html">Interesting live typing title header text</title><link href="http://localhost:4000/2017/03/01/live-typing-title-header-text" rel="alternate" type="text/html" title="Interesting live typing title header text" /><published>2017-03-01T00:00:00-06:00</published><updated>2017-03-01T00:00:00-06:00</updated><id>http://localhost:4000/2017/03/01/live-typing-title-header-text</id><content type="html" xml:base="http://localhost:4000/2017/03/01/live-typing-title-header-text">&lt;p&gt;Hi! This is a simple pen for doing live typing title text. These are my notes on the project:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-01T17:43:23-06:00</updated><id>http://localhost:4000/</id><title type="html">Sean Codes</title><subtitle>Hi! I'm a software developer in Chicago exploring Web Technology, Network Programming, and 2D Animation/Game Development.
+</subtitle><entry><title type="html">Focus Pointer Events Toggle Trick</title><link href="http://localhost:4000/2017/05/22/focus-pointer-events-toggle-trick" rel="alternate" type="text/html" title="Focus Pointer Events Toggle Trick" /><published>2017-05-22T00:00:00-05:00</published><updated>2017-05-22T00:00:00-05:00</updated><id>http://localhost:4000/2017/05/22/focus-pointer-events-toggle-trick</id><content type="html" xml:base="http://localhost:4000/2017/05/22/focus-pointer-events-toggle-trick">&lt;p&gt;Bit abount using the &lt;code class=&quot;highlighter-rouge&quot;&gt;focus&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;pointer-events&lt;/code&gt; to make a css only toggle button!&lt;/p&gt;
+
+&lt;p data-height=&quot;200&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;d0e5e3343bf7bf47e2e3abb99b317e76&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Simple Focus Pointer Events Example&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;https://codepen.io/sean_codes/pen/d0e5e3343bf7bf47e2e3abb99b317e76/&quot;&gt;Simple Focus Pointer Events Example&lt;/a&gt; by Sean Codes (&lt;a href=&quot;https://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;https://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;basics&quot;&gt;Basics&lt;/h2&gt;
+&lt;p&gt;We add a &lt;code class=&quot;highlighter-rouge&quot;&gt;tabindex=&quot;1&quot;&lt;/code&gt; to the div element so it can be focused. In the CSS when the div is focused we give it a property &lt;code class=&quot;highlighter-rouge&quot;&gt;pointer-events:none&lt;/code&gt;. This makes the button on clickable. Now when you click again it will lose focus. Acting as a toggle switch!&lt;/p&gt;
+
+&lt;h2 id=&quot;the-html&quot;&gt;The html&lt;/h2&gt;
+&lt;p&gt;Just a div with a tab index&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   &amp;lt;div tabindex='1'&amp;gt;Click Me&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;the-css&quot;&gt;The CSS&lt;/h2&gt;
+
+&lt;p&gt;Some extra styles for making it look button like! The only requirements is the &lt;code class=&quot;highlighter-rouge&quot;&gt;:focus&lt;/code&gt; with a &lt;code class=&quot;highlighter-rouge&quot;&gt;pointer-events:none&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  div{
+     max-width:200px;
+     height:50px;
+     line-height:50px;
+     text-align:center;
+     margin:40px auto;
+     background:#f22;
+     user-select:none;
+     outline:none;
+  }
+  div:focus{
+     pointer-events:none;
+     background:#465;
+  }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Please take a look at the codepen and let me know if you need any help!&lt;/p&gt;
+
+&lt;p&gt;This is a pretty simple effect that I haven’t found to much use in the wild but I find it extra convenient to use for demo and examples where I would normally use label and checkboxes for toggles!
+Here is a more interesting example :]&lt;/p&gt;
+
+&lt;p data-height=&quot;265&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;809d25c6012943927ebaf36ec16bce42&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;CSS Only Focus Toggle&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;https://codepen.io/sean_codes/pen/809d25c6012943927ebaf36ec16bce42/&quot;&gt;CSS Only Focus Toggle&lt;/a&gt; by Sean Codes (&lt;a href=&quot;https://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;https://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content><author><name></name></author><category term="codepen" /><category term="title" /><category term="javascript" /><category term="title" /><category term="frontend" /><summary type="html">Bit abount using the focus and pointer-events to make a css only toggle button!</summary></entry><entry><title type="html">Canvas Particle Background Connection</title><link href="http://localhost:4000/2017/03/29/canvas-particle-background-effect" rel="alternate" type="text/html" title="Canvas Particle Background Connection" /><published>2017-03-29T00:00:00-05:00</published><updated>2017-03-29T00:00:00-05:00</updated><id>http://localhost:4000/2017/03/29/canvas-particle-background-effect</id><content type="html" xml:base="http://localhost:4000/2017/03/29/canvas-particle-background-effect">&lt;p&gt;Some notes on creating a particle connection effect!&lt;/p&gt;
+
+&lt;p data-height=&quot;400&quot; data-theme-id=&quot;dark&quot; data-slug-hash=&quot;OpoQEp&quot; data-default-tab=&quot;js,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Front End Canvas Particle Connection&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/OpoQEp/&quot;&gt;Front End Canvas Particle Connection&lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;how-this-works&quot;&gt;How this works&lt;/h2&gt;
+&lt;p&gt;To do this effect we will create a set number of particles. Each with a speed, position, and size. Then we will move them on that speed using &lt;code class=&quot;highlighter-rouge&quot;&gt;requestAnimationFrame&lt;/code&gt;. Inside that movement we will also check the distance from all the other points! If the distance is short enough we will draw a line from each particles x,y coordiantes!&lt;/p&gt;
+
+&lt;h2 id=&quot;the-html&quot;&gt;The html&lt;/h2&gt;
+&lt;p&gt;All we need is a canvas element!&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;canvas&amp;gt;&amp;lt;/canvas&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;setup-the-javascript&quot;&gt;Setup the javascript&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var canvas = document.querySelector('canvas')
+var body = document.querySelector('body')
+canvas.width = body.offsetWidth
+canvas.height = body.offsetHeight
+var ctx = canvas.getContext('2d')
+var particleCount = 100
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;creating-the-particles&quot;&gt;Creating the particles&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;partCnt = 100;
+var particles = []
+for(var i = 0; i &amp;lt; partCnt; i++){
+   particles[i] = {
+      x: random_range(0, canvas.width),
+      y: random_range(0, canvas.height),
+      xSpeed: random_range(-2, 2),
+      ySpeed: random_range(-2, 2),
+      size: random_range(1, 10),
+      range: random_range(10, 75)
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;the-random_range-function&quot;&gt;The random_range function&lt;/h2&gt;
+&lt;p&gt;Just incase you’re not bringing your own! :]&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function random_range(min, max){
+   return Math.round(min + Math.random() * (max-min))
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;part1-drawing-and-moving-the-particles&quot;&gt;PART1: Drawing and moving the particles&lt;/h2&gt;
+&lt;p&gt;We create a draw function. Then we will use &lt;code class=&quot;highlighter-rouge&quot;&gt;fillRect&lt;/code&gt; to draw the particles. Also call the &lt;code class=&quot;highlighter-rouge&quot;&gt;check_points&lt;/code&gt; function we will create below!&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;requestAnimationFrame(draw)
+function draw(){
+   requestAnimationFrame(draw)
+   ctx.fillStyle = '#222'
+   ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+   //Loop each particle
+   for(var i = 0; i &amp;lt; partCnt; i++){
+
+      //Draw the particle
+      particles[i].x += particles[i].xSpeed;
+      particles[i].y += particles[i].ySpeed;
+      ctx.fillStyle = &quot;#555&quot;
+      ctx.fillRect(particles[i].x,particles[i].y,particles[i].size,particles[i].size)
+
+      //How we will draw the lines
+      check_points(particles[i].x, particles[i].y, particles[i].size, particles[i].range)
+
+      //This will flip the particles across if they go out of bounds!
+      if(particles[i].x &amp;gt; canvas.width)
+         particles[i].x = 0
+      if(particles[i].x &amp;lt; 0)
+         particles[i].x = canvas.width
+      if(particles[i].y &amp;gt; canvas.height)
+         particles[i].y = 0
+      if(particles[i].y &amp;lt; 0)
+         particles[i].y = canvas.height
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;part2-drawing-the-lines&quot;&gt;PART2: Drawing the lines&lt;/h2&gt;
+&lt;p&gt;This will do a distance calculation on each particle to see if we are within range of another particles. If we are then draw a line between them.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function check_points(x, y, size, range){
+   for(var i = 0; i &amp;lt; partCnt; i++){
+      if(distance(x, y, particles[i].x, particles[i].y) &amp;lt; range){
+         ctx.beginPath()
+         ctx.moveTo(x+size/2,y+size/2)
+         ctx.lineTo(particles[i].x+particles[i].size/2,particles[i].y+particles[i].size/2)
+         ctx.strokeStyle = &quot;#991100&quot;
+         ctx.stroke()
+      }
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;part3-the-distance-function&quot;&gt;PART3: the distance function&lt;/h2&gt;
+&lt;p&gt;Again if you did not bring your own!&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function distance(x1, y1, x2, y2){
+   return Math.sqrt(Math.pow((x2 - x1),2) + Math.pow((y2 - y1),2) )
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="codepen" /><category term="title" /><category term="javascript" /><category term="title" /><category term="frontend" /><summary type="html">Some notes on creating a particle connection effect!</summary></entry><entry><title type="html">Dynamic Vertical Height Dropdowns</title><link href="http://localhost:4000/2017/03/26/dynamic-vertical-height-dropdown" rel="alternate" type="text/html" title="Dynamic Vertical Height Dropdowns" /><published>2017-03-26T00:00:00-05:00</published><updated>2017-03-26T00:00:00-05:00</updated><id>http://localhost:4000/2017/03/26/dynamic-vertical-height-dropdown</id><content type="html" xml:base="http://localhost:4000/2017/03/26/dynamic-vertical-height-dropdown">&lt;p&gt;Notes for dynamic sized drop downs&lt;/p&gt;
+
+&lt;h2 id=&quot;basics&quot;&gt;Basics&lt;/h2&gt;
+&lt;p&gt;Sometimes when doing drops downs the easiest way is by using the max-height and transitioning on that. We will use &lt;code class=&quot;highlighter-rouge&quot;&gt;transform:translateY(Xpx)&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-html&quot;&gt;The html&lt;/h2&gt;
+&lt;p&gt;We need a container with a main button and list of buttons inside!&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   .dropdown
+      .toggle(tabindex=1) Click Me!
+      .list
+         .button button 1
+         .button button 2
+         .button button 3
+         .button button 4
+         .button button 5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;the-css&quot;&gt;The CSS&lt;/h2&gt;
+
+&lt;p&gt;Pretty simple CSS here you don’t need SCSS but I find it better for organization. Things to note are the &lt;code class=&quot;highlighter-rouge&quot;&gt;.dropdown&lt;/code&gt; has a   &lt;code class=&quot;highlighter-rouge&quot;&gt;overflow:hidden&lt;/code&gt;. That is what will hide the dropdown when in the &lt;code class=&quot;highlighter-rouge&quot;&gt;transform:translateY(-100%)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   .dropdown{
+      position:relative;
+      overflow:hidden;
+      max-width:200px;
+      margin:40px auto;
+      .toggle{
+         height:40px;
+         line-height:40px;
+         text-align:center;
+         background:#CDCDCD;
+         width:200px;
+         z-index:1;
+         position:relative;
+         &amp;amp;:focus{
+            pointer-events:none;
+            ~ .list{
+               transform:translateY(0%);
+            }
+         }
+      }
+      .list{
+         z-index:0;
+         position:relative;
+         transform:translateY(-100%);
+         transition:all 0.5s;
+      }
+   }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Please take a look at the codepen and let me know if you need any help!&lt;/p&gt;
+
+&lt;p data-height=&quot;265&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;e35995270eb6e206fba63a393e4d4f6c&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Dynamic Vertical Height DropDown&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;https://codepen.io/sean_codes/pen/e35995270eb6e206fba63a393e4d4f6c/&quot;&gt;Dynamic Vertical Height DropDown&lt;/a&gt; by Sean Codes (&lt;a href=&quot;https://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;https://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content><author><name></name></author><category term="codepen" /><category term="title" /><category term="javascript" /><category term="title" /><category term="frontend" /><summary type="html">Notes for dynamic sized drop downs</summary></entry><entry><title type="html">Button Border Animations</title><link href="http://localhost:4000/2017/03/04/psuedo-button-border-transition-animations" rel="alternate" type="text/html" title="Button Border Animations" /><published>2017-03-04T00:00:00-06:00</published><updated>2017-03-04T00:00:00-06:00</updated><id>http://localhost:4000/2017/03/04/psuedo-button-border-transition-animations</id><content type="html" xml:base="http://localhost:4000/2017/03/04/psuedo-button-border-transition-animations">&lt;p&gt;This is a codepen on border animations on square buttons! These are my notes on the project:&lt;/p&gt;
+
+&lt;h2 id=&quot;how-this-works&quot;&gt;How this works&lt;/h2&gt;
+&lt;p&gt;The basic behind the trick is to use both the psuedo selectors &lt;code class=&quot;highlighter-rouge&quot;&gt;::after&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;::before&lt;/code&gt;. The after will take care of the top and right border and the before will take care of the bottom and left border!&lt;/p&gt;
+
+&lt;h2 id=&quot;the-html&quot;&gt;The html&lt;/h2&gt;
+&lt;p&gt;This animation should only require one &lt;code class=&quot;highlighter-rouge&quot;&gt;button&lt;/code&gt; element.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;button class=&quot;btn&quot;&amp;gt;This is the button&amp;lt;/button&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;the-animations&quot;&gt;The animations&lt;/h2&gt;
+&lt;p&gt;What I did was create a list of all the animations I wanted to use. The naming convention works like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;n = Do not display
+s = static hold the size
+a = animate the side
+aW_sH = Animate width and keep height at 100%
+sW_aH = Keep width at 100% and animate the height
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Code:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/* A weird set of keyframes that can do anything */
+@keyframes aW_sH{ from{height:100%; width:0%;} to{height:100%; width:100%;} }
+@keyframes sW_aH{ from{width:100%; height:0%;} to{width:100%; height:100%;} }
+@keyframes sW_sH{ from{width:100%; height:100%;} to{width:100%; height:100%;} }
+@keyframes nW_nH{ from,to{border-width:0px;} }
+@keyframes nW_aH{ from{height:0%;} to{height:100%;} }
+@keyframes nW_sH{ from,to{height:100%;} }
+@keyframes sW_nH{ from,to{width:100%;} }
+@keyframes aW_nH{ from{width:0%;} to{width:100%;} }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;the-manuver-&quot;&gt;The manuver :]&lt;/h2&gt;
+
+&lt;p&gt;At the end of the animation cycle im using &lt;code class=&quot;highlighter-rouge&quot;&gt;animate: sH_sW 1s inifinite&lt;/code&gt;. This is going to hold the position of the height and width so we can animate the next psuedo element!&lt;/p&gt;
+
+&lt;p&gt;Please take a look at the codepen and let me know if you need any help!&lt;/p&gt;
+
+&lt;p data-height=&quot;400&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;YZWqLo&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Front End Day 41 - Button Border Transition&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/YZWqLo/&quot;&gt;Front End Day 41 - Button Border Transition&lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content><author><name></name></author><category term="codepen" /><category term="title" /><category term="javascript" /><category term="title" /><category term="frontend" /><summary type="html">This is a codepen on border animations on square buttons! These are my notes on the project:</summary></entry><entry><title type="html">Interesting live typing title header text</title><link href="http://localhost:4000/2017/03/01/live-typing-title-header-text" rel="alternate" type="text/html" title="Interesting live typing title header text" /><published>2017-03-01T00:00:00-06:00</published><updated>2017-03-01T00:00:00-06:00</updated><id>http://localhost:4000/2017/03/01/live-typing-title-header-text</id><content type="html" xml:base="http://localhost:4000/2017/03/01/live-typing-title-header-text">&lt;p&gt;An example for doing live typing title text. These are my notes on the project:&lt;/p&gt;
 
 &lt;h2 id=&quot;how-this-works&quot;&gt;How this works&lt;/h2&gt;
 &lt;p&gt;This pen is an easy pen that uses a &lt;code class=&quot;highlighter-rouge&quot;&gt;setTimeout&lt;/code&gt; to basically flip from typing and backspacing and in between switch words.&lt;/p&gt;
@@ -37,7 +290,7 @@ typed = '' //Hold the word we are typing
 &lt;p&gt;Please take a look at the codepen and let me know if you need any help!&lt;/p&gt;
 
 &lt;p data-height=&quot;265&quot; data-theme-id=&quot;dark&quot; data-slug-hash=&quot;WpQeJy&quot; data-default-tab=&quot;js,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Front End Day 38.1 - Typing Header &quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/WpQeJy/&quot;&gt;Front End Day 38.1 - Typing Header &lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
-&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content><category term="codepen" /><category term="title" /><category term="javascript" /><category term="title" /><category term="frontend" /><summary type="html">Hi! This is a simple pen for doing live typing title text. These are my notes on the project:</summary></entry><entry><title type="html">Classy Floating direction aware cards with no JavaScript only CSS</title><link href="http://localhost:4000/2017/02/27/floating-direction-aware-cards" rel="alternate" type="text/html" title="Classy Floating direction aware cards with no JavaScript only CSS" /><published>2017-02-27T00:00:00-06:00</published><updated>2017-02-27T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/27/floating-direction-aware-cards</id><content type="html" xml:base="http://localhost:4000/2017/02/27/floating-direction-aware-cards">&lt;p&gt;This is a codepen of floating direction aware cards! The effect i really interesting. These are my notes on the subject:&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content><author><name></name></author><category term="codepen" /><category term="title" /><category term="javascript" /><category term="title" /><category term="frontend" /><summary type="html">An example for doing live typing title text. These are my notes on the project:</summary></entry><entry><title type="html">Classy Floating direction aware cards with no JavaScript only CSS</title><link href="http://localhost:4000/2017/02/27/floating-direction-aware-cards" rel="alternate" type="text/html" title="Classy Floating direction aware cards with no JavaScript only CSS" /><published>2017-02-27T00:00:00-06:00</published><updated>2017-02-27T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/27/floating-direction-aware-cards</id><content type="html" xml:base="http://localhost:4000/2017/02/27/floating-direction-aware-cards">&lt;p&gt;A codepen of floating direction aware cards! The effect i really interesting. These are my notes on the subject:&lt;/p&gt;
 
 &lt;h2 id=&quot;the-basics-of-direction-awareness&quot;&gt;The basics of direction awareness&lt;/h2&gt;
 &lt;p&gt;The effect works by using the &lt;code class=&quot;highlighter-rouge&quot;&gt;~&lt;/code&gt; selector and &lt;code class=&quot;highlighter-rouge&quot;&gt;z-index&lt;/code&gt;. What we do it create a container then inside we lay target squares or corners and then final square or the ‘plane’. When we hover any of the target squares we will use the &lt;code class=&quot;highlighter-rouge&quot;&gt;~&lt;/code&gt; selector to select the plain and then rotate the x and y towards that direction&lt;/p&gt;
@@ -137,10 +390,10 @@ Please take a deeper look at the codepen and let me know if you need any help!&l
 &lt;/blockquote&gt;
 
 &lt;p data-height=&quot;500&quot; data-theme-id=&quot;dark&quot; data-slug-hash=&quot;jBEBpz&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Front End Day 36 - Classy Floating direction aware cards&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/jBEBpz/&quot;&gt;Front End Day 36 - Classy Floating direction aware cards&lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
-&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content><category term="codepen" /><category term="material" /><category term="css" /><category term="coding" /><category term="nojs" /><summary type="html">This is a codepen of floating direction aware cards! The effect i really interesting. These are my notes on the subject:</summary></entry><entry><title type="html">Toggle login and register form single page app animation, using only CSS</title><link href="http://localhost:4000/2017/02/23/no-javascript-login-register-toggle-form-animation" rel="alternate" type="text/html" title="Toggle login and register form single page app animation, using only CSS" /><published>2017-02-23T00:00:00-06:00</published><updated>2017-02-23T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/23/no-javascript-login-register-toggle-form-animation</id><content type="html" xml:base="http://localhost:4000/2017/02/23/no-javascript-login-register-toggle-form-animation">&lt;p&gt;This is a codepen of switching a login and register form with a animation where the first slides out maintaining the front position then forces a lower z-index to slide behind. Just vanilla CSS. These are my notes on the project:&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content><author><name></name></author><category term="codepen" /><category term="material" /><category term="css" /><category term="coding" /><category term="nojs" /><summary type="html">A codepen of floating direction aware cards! The effect i really interesting. These are my notes on the subject:</summary></entry><entry><title type="html">Toggle login and register form single page app animation, using only CSS</title><link href="http://localhost:4000/2017/02/23/no-javascript-login-register-toggle-form-animation" rel="alternate" type="text/html" title="Toggle login and register form single page app animation, using only CSS" /><published>2017-02-23T00:00:00-06:00</published><updated>2017-02-23T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/23/no-javascript-login-register-toggle-form-animation</id><content type="html" xml:base="http://localhost:4000/2017/02/23/no-javascript-login-register-toggle-form-animation">&lt;p&gt;Switching a login and register form with a animation where the first slides out maintaining the front position then forces a lower z-index to slide behind. Just vanilla CSS. These are my notes on the project:&lt;/p&gt;
 
 &lt;h2 id=&quot;the-basics&quot;&gt;The basics&lt;/h2&gt;
-&lt;p&gt;To do this switch I’m using two divs and two radios. To start I set the divs with a min-height and max-width and &lt;code class=&quot;highlighter-rouge&quot;&gt;margin:auto&lt;/code&gt;. I create two animations for &lt;code class=&quot;highlighter-rouge&quot;&gt;slideIn&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;slideOut&lt;/code&gt;. 
+&lt;p&gt;To do this switch I’m using two divs and two radios. To start I set the divs with a min-height and max-width and &lt;code class=&quot;highlighter-rouge&quot;&gt;margin:auto&lt;/code&gt;. I create two animations for &lt;code class=&quot;highlighter-rouge&quot;&gt;slideIn&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;slideOut&lt;/code&gt;.
 When I have an input checked I use the slidein animation and use the slideout animation on the non checked.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;input.login + div,
@@ -197,7 +450,7 @@ input.register:checked + div{
 &lt;p&gt;Please take a deeper look at the codepen and let me know if you need any help!&lt;/p&gt;
 
 &lt;p data-height=&quot;600&quot; data-theme-id=&quot;dark&quot; data-slug-hash=&quot;PpoOzr&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Front End Day - 35 - No JS Login Register toggle&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/PpoOzr/&quot;&gt;Front End Day - 35 - No JS Login Register toggle&lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
-&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content><category term="codepen" /><category term="material" /><category term="css" /><category term="coding" /><category term="nojs" /><category term="login" /><category term="form" /><summary type="html">This is a codepen of switching a login and register form with a animation where the first slides out maintaining the front position then forces a lower z-index to slide behind. Just vanilla CSS. These are my notes on the project:</summary></entry><entry><title type="html">Toggle switches, radio buttons, and checkbox styles, using only CSS</title><link href="http://localhost:4000/2017/02/21/pure-css-checkboxes-toggle-switch-radio" rel="alternate" type="text/html" title="Toggle switches, radio buttons, and checkbox styles, using only CSS" /><published>2017-02-21T00:00:00-06:00</published><updated>2017-02-21T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/21/pure-css-checkboxes-toggle-switch-radio</id><content type="html" xml:base="http://localhost:4000/2017/02/21/pure-css-checkboxes-toggle-switch-radio">&lt;p&gt;This is a codepen of interesting radio, checkbox, and toggle switches! I just wanted to share with you my notes of making this project&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content><author><name></name></author><category term="codepen" /><category term="material" /><category term="css" /><category term="coding" /><category term="nojs" /><category term="login" /><category term="form" /><summary type="html">Switching a login and register form with a animation where the first slides out maintaining the front position then forces a lower z-index to slide behind. Just vanilla CSS. These are my notes on the project:</summary></entry><entry><title type="html">Toggle switches, radio buttons, and checkbox styles, using only CSS</title><link href="http://localhost:4000/2017/02/21/pure-css-checkboxes-toggle-switch-radio" rel="alternate" type="text/html" title="Toggle switches, radio buttons, and checkbox styles, using only CSS" /><published>2017-02-21T00:00:00-06:00</published><updated>2017-02-21T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/21/pure-css-checkboxes-toggle-switch-radio</id><content type="html" xml:base="http://localhost:4000/2017/02/21/pure-css-checkboxes-toggle-switch-radio">&lt;p&gt;Interesting radio, checkbox, and toggle switches! I just wanted to share with you my notes of making this project&lt;/p&gt;
 
 &lt;h2 id=&quot;the-toggle-switch&quot;&gt;The toggle switch&lt;/h2&gt;
 
@@ -222,7 +475,7 @@ input.register:checked + div{
 &lt;p&gt;Please take a deeper look at the codepen and let me know if you need any help!&lt;/p&gt;
 
 &lt;p data-height=&quot;400&quot; data-theme-id=&quot;dark&quot; data-slug-hash=&quot;ygmNJO&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Front End Day 33 - Fancy Checkbox and Toggle Switches&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/ygmNJO/&quot;&gt;Front End Day 33 - Fancy Checkbox and Toggle Switches&lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
-&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content><category term="codepen" /><category term="material" /><category term="css" /><category term="coding" /><category term="nojs" /><summary type="html">This is a codepen of interesting radio, checkbox, and toggle switches! I just wanted to share with you my notes of making this project</summary></entry><entry><title type="html">Fancy Loading Bar with scale, rotate, and translate</title><link href="http://localhost:4000/2017/02/19/fancy-circular-loading-bar" rel="alternate" type="text/html" title="Fancy Loading Bar with scale, rotate, and translate" /><published>2017-02-19T00:00:00-06:00</published><updated>2017-02-19T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/19/fancy-circular-loading-bar</id><content type="html" xml:base="http://localhost:4000/2017/02/19/fancy-circular-loading-bar">&lt;p&gt;This is a codepen of a fancy circular loading bar. Where dots are displayed in a cricle and grow! Also with a line underneith. These are some notes I took while making the project!&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content><author><name></name></author><category term="codepen" /><category term="material" /><category term="css" /><category term="coding" /><category term="nojs" /><summary type="html">Interesting radio, checkbox, and toggle switches! I just wanted to share with you my notes of making this project</summary></entry><entry><title type="html">Fancy Loading Bar with scale, rotate, and translate</title><link href="http://localhost:4000/2017/02/19/fancy-circular-loading-bar" rel="alternate" type="text/html" title="Fancy Loading Bar with scale, rotate, and translate" /><published>2017-02-19T00:00:00-06:00</published><updated>2017-02-19T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/19/fancy-circular-loading-bar</id><content type="html" xml:base="http://localhost:4000/2017/02/19/fancy-circular-loading-bar">&lt;p&gt;Circular loading bar. Where dots are displayed in a cricle and grow! Also with a line underneith. These are some notes I took while making the project!&lt;/p&gt;
 
 &lt;h2 id=&quot;the-html-pug&quot;&gt;The HTML (Pug)&lt;/h2&gt;
 &lt;p&gt;The mark up is a bit simple. We need 10 elements within a parent. With a chicle element within the 10 elements. This is because we want to simply use scale for smooth animations and also will be using translate and scale will also scale translates!&lt;/p&gt;
@@ -247,10 +500,10 @@ input.register:checked + div{
       margin:auto;
       transform: rotateZ($i * 36deg) translateY(50px);
    }
-   
+
    /* Read below */
    .bubble:nth-child(#{$i}) .circle{
-      animation-delay: $i * 0.1s; 
+      animation-delay: $i * 0.1s;
    }
 }
 &lt;/code&gt;&lt;/pre&gt;
@@ -270,7 +523,7 @@ input.register:checked + div{
 &lt;p&gt;Here is the codepen please take a look let me know if you have any questions or need any help!&lt;/p&gt;
 
 &lt;p data-height=&quot;400&quot; data-theme-id=&quot;dark&quot; data-slug-hash=&quot;RKzNWj&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Front End Day 31 - Loading Bar with bubbles&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/RKzNWj/&quot;&gt;Front End Day 31 - Loading Bar with bubbles&lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
-&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content><category term="codepen" /><category term="material" /><category term="css" /><category term="coding" /><category term="nojs" /><summary type="html">This is a codepen of a fancy circular loading bar. Where dots are displayed in a cricle and grow! Also with a line underneith. These are some notes I took while making the project!</summary></entry><entry><title type="html">Pure CSS Material Design FAB Button Burst Modal</title><link href="http://localhost:4000/2017/02/18/material-fab-burst-modal-button-with-content" rel="alternate" type="text/html" title="Pure CSS Material Design FAB Button Burst Modal" /><published>2017-02-18T00:00:00-06:00</published><updated>2017-02-18T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/18/material-fab-burst-modal-button-with-content</id><content type="html" xml:base="http://localhost:4000/2017/02/18/material-fab-burst-modal-button-with-content">&lt;p&gt;This is a codepen of a material design FAB burst button. When you click the button it will burst and show the content. These are some notes I took while making this micro app.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content><author><name></name></author><category term="codepen" /><category term="material" /><category term="css" /><category term="coding" /><category term="nojs" /><summary type="html">Circular loading bar. Where dots are displayed in a cricle and grow! Also with a line underneith. These are some notes I took while making the project!</summary></entry><entry><title type="html">Pure CSS Material Design FAB Button Burst Modal</title><link href="http://localhost:4000/2017/02/18/material-fab-burst-modal-button-with-content" rel="alternate" type="text/html" title="Pure CSS Material Design FAB Button Burst Modal" /><published>2017-02-18T00:00:00-06:00</published><updated>2017-02-18T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/18/material-fab-burst-modal-button-with-content</id><content type="html" xml:base="http://localhost:4000/2017/02/18/material-fab-burst-modal-button-with-content">&lt;p&gt;A Material design FAB burst button. When you click the button it will burst and show the content. These are some notes I took while making this micro app.&lt;/p&gt;
 
 &lt;h2 id=&quot;positioning-the-button&quot;&gt;Positioning the button&lt;/h2&gt;
 &lt;p&gt;To position the button I’m using &lt;code class=&quot;highlighter-rouge&quot;&gt;position:relative&lt;/code&gt; on the container and &lt;code class=&quot;highlighter-rouge&quot;&gt;position:absolute&lt;/code&gt; on the button. Then just a &lt;code class=&quot;highlighter-rouge&quot;&gt;buttom:y&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;right:x&lt;/code&gt;&lt;/p&gt;
@@ -307,122 +560,4 @@ I broke the button innt into many parts and the entire button could be wrapped i
 &lt;p&gt;Here is the codepen please take a look let me know if you have any questions or need any help!&lt;/p&gt;
 
 &lt;p data-height=&quot;550&quot; data-theme-id=&quot;dark&quot; data-slug-hash=&quot;PWgMod&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Front End Day 29 - NO JAVASCRIPT Material FAB Burst Popup with content&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/PWgMod/&quot;&gt;Front End Day 29 - NO JAVASCRIPT Material FAB Burst Popup with content&lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
-&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content><category term="codepen" /><category term="material" /><category term="css" /><category term="coding" /><category term="nojs" /><summary type="html">This is a codepen of a material design FAB burst button. When you click the button it will burst and show the content. These are some notes I took while making this micro app.</summary></entry><entry><title type="html">Bootstrap Style Mobile Nav without JavaScript or Static Height</title><link href="http://localhost:4000/2017/02/17/bootstrap-mobile-nav-without-javascript-or-set-height" rel="alternate" type="text/html" title="Bootstrap Style Mobile Nav without JavaScript or Static Height" /><published>2017-02-17T00:00:00-06:00</published><updated>2017-02-17T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/17/bootstrap-mobile-nav-without-javascript-or-set-height</id><content type="html" xml:base="http://localhost:4000/2017/02/17/bootstrap-mobile-nav-without-javascript-or-set-height">&lt;p&gt;Hi! This is a basic template for a responsive navigation for desktop/tabel and mobile phone. The mobile phone will go full width and drop down the way bootstrap does. The desktop version displays the buttons at the top with the primary button floated to the right. These are some notes from the project:&lt;/p&gt;
-
-&lt;h2 id=&quot;top-nav-floating-primary-without-clearfix&quot;&gt;Top nav floating primary without clearfix&lt;/h2&gt;
-&lt;p&gt;Since the non floated buttons where switched to &lt;code class=&quot;highlighter-rouge&quot;&gt;display:inline-block&lt;/code&gt; we don’t need to use a clearfix. If you want the buttons spaced to match the outer padding I would &lt;code class=&quot;highlighter-rouge&quot;&gt;float:right&lt;/code&gt; on the nav list elements. Then use a simple clear fix (IE 8+):&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.clearfix:after{
-    display:table;
-    content: &quot; &quot;;
-    clear:both;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;hiding-the-mobile-nav-with-dynamic-height&quot;&gt;Hiding the mobile nav with dynamic height&lt;/h2&gt;
-&lt;p&gt;To do this I set the container as &lt;code class=&quot;highlighter-rouge&quot;&gt;overflow:hidden&lt;/code&gt; and then on hiding the nav I use &lt;code class=&quot;highlighter-rouge&quot;&gt;transform:translateY(100%)&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/*
-    Instead of using checkbox you could toggle a class with javascript.
-    Some people don't like the checkbox for toggling but I think it's much more elegant
-*/
-nav input:checked + ul{
- transform:translateY(-100%);
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;mobile-first-nav&quot;&gt;Mobile first nav&lt;/h2&gt;
-&lt;p&gt;I designed this by doing the mobile parts first then I added the styles to turn the list elements into &lt;code class=&quot;highlighter-rouge&quot;&gt;inline-block&lt;/code&gt; and remove the transform.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-effect-is-most-likely-only-mobile-for-you&quot;&gt;The effect is most likely only mobile for you!&lt;/h2&gt;
-&lt;p&gt;If your on a phone this is only going to display mobile you might be able to go landscape mode to see desktop version.&lt;/p&gt;
-
-&lt;p data-height=&quot;600&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;XpQOwG&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Front End - Bootstrap Style Mobile Nav without JavaScript or Static Height&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/XpQOwG/&quot;&gt;Front End - Bootstrap Style Mobile Nav without JavaScript or Static Height&lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
-&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;Please let me know if you have any questions I can help you understand better!&lt;/p&gt;</content><category term="codepen" /><category term="material" /><category term="flexbox" /><category term="jquery" /><category term="frontend" /><category term="animation" /><category term="data" /><summary type="html">Hi! This is a basic template for a responsive navigation for desktop/tabel and mobile phone. The mobile phone will go full width and drop down the way bootstrap does. The desktop version displays the buttons at the top with the primary button floated to the right. These are some notes from the project:</summary></entry><entry><title type="html">Creating a tool for handling backend cron jobs</title><link href="http://localhost:4000/2017/02/16/front-end-micro-app-with-no-frameworks" rel="alternate" type="text/html" title="Creating a tool for handling backend cron jobs" /><published>2017-02-16T00:00:00-06:00</published><updated>2017-02-16T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/16/front-end-micro-app-with-no-frameworks</id><content type="html" xml:base="http://localhost:4000/2017/02/16/front-end-micro-app-with-no-frameworks">&lt;p&gt;This is a javascript heavy front end template I created for creating, deleting, and updating backend cron jobs. This uses no frameworks or plugins. Here are some notes:&lt;/p&gt;
-
-&lt;h2 id=&quot;data-storage&quot;&gt;Data storage&lt;/h2&gt;
-&lt;p&gt;The data is being stores in a JSON array. The id field is for when creating new jobs it will stay uniqie until hooked up to a database.&lt;/p&gt;
-
-&lt;h2 id=&quot;documentqueryselector-for-fake-jquery&quot;&gt;document.querySelector for fake JQuery&lt;/h2&gt;
-&lt;p&gt;I am using this to select elements to cut out the need for JQuery&lt;/p&gt;
-
-&lt;p&gt;//Simple Fake JQuery
-   var $ = function(str){
-      var ele = document.querySelectorAll(str);
-      if(ele.length == 1) ele = ele[0];
-      ele.on = function(event, func){ this.addEventListener(event, func); }
-      return ele;
-   };&lt;/p&gt;
-
-&lt;h2 id=&quot;the-app-functions&quot;&gt;The app functions&lt;/h2&gt;
-&lt;p&gt;I broke the app into a bunch of small functions for that we could manipulate the data and template with using simplier commands like openModify and close Modify&lt;/p&gt;
-
-&lt;h2 id=&quot;appending-an-element-with-vanilla-javascript&quot;&gt;Appending an element with vanilla javascript&lt;/h2&gt;
-&lt;p&gt;To append an element using vanilla javascript I kept it simple and created a string of the element and then added it to the innerHTML. This works well!&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var template = `
-   &amp;lt;tr class='jobrow' id='${jobID}'&amp;gt;
-      &amp;lt;td&amp;gt;${job.name}&amp;lt;/td&amp;gt;
-      &amp;lt;td&amp;gt;${job.path}&amp;lt;/td&amp;gt;
-      &amp;lt;td&amp;gt;${job.startDate} ${job.startTime}&amp;lt;/td&amp;gt;
-      &amp;lt;td&amp;gt;${job.interval}&amp;lt;/td&amp;gt;
-   &amp;lt;/tr&amp;gt;`;
- app.jobs.innerHTML += template;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;getting-a-job-index&quot;&gt;Getting a job index&lt;/h2&gt;
-&lt;p&gt;Because when hooked into a database and if you deelte a job in the middle of the array the job keys are not going to always match up. To keep a unique key associated with a job I created a simple function to keturn the job key.&lt;/p&gt;
-
-&lt;p&gt;getJobIndex: function(key){
-         var index = 0;
-         app.data.rows.forEach(function(job, index){
-            if(job.key == Number(key))
-               return;
-         })
-         return index
-      }&lt;/p&gt;
-
-&lt;p&gt;#Saving and Adding new jobs
-When saving or adding a new job when you hit the save button the data is updated and then the entire table that is displayed is refreshed to display the freshly updated data&lt;/p&gt;
-
-&lt;p data-height=&quot;600&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;XpGvNg&quot; data-default-tab=&quot;js,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Front End - Cron Job Manager&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/XpGvNg/&quot;&gt;Front End - Cron Job Manager&lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
-&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;I hope this helps you please let me know if you have any questions!&lt;/p&gt;</content><category term="codepen" /><category term="material" /><category term="flexbox" /><category term="jquery" /><category term="frontend" /><category term="animation" /><category term="data" /><summary type="html">This is a javascript heavy front end template I created for creating, deleting, and updating backend cron jobs. This uses no frameworks or plugins. Here are some notes:</summary></entry><entry><title type="html">A Messenger template with flexbox</title><link href="http://localhost:4000/2017/02/15/codepen-messenger-flexbox" rel="alternate" type="text/html" title="A Messenger template with flexbox" /><published>2017-02-15T00:00:00-06:00</published><updated>2017-02-15T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/15/codepen-messenger-flexbox</id><content type="html" xml:base="http://localhost:4000/2017/02/15/codepen-messenger-flexbox">&lt;p&gt;This is a simple messenger template that uses vertical and horizontal flexbox! These are some notes I took from the project.&lt;/p&gt;
-
-&lt;h2 id=&quot;make-an-element-centered&quot;&gt;Make an element centered&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/* the .parent can be body! Just make sure body and html are height:100% */
-.parent{ display: flex; }
-.child {flex: 1; margin: auto; }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;vertical-flexbox&quot;&gt;Vertical flexbox&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.parent{ display: flex; flex-direction: column; }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;fluid-design-element-with-fixed-width-of-100px&quot;&gt;Fluid design element with fixed width of 100px&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.parent{ display: flex; }
-.elementFixedWidth { width: 100px; }
-.elementFluid{ flex: 1; }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p data-height=&quot;550&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;xgMNxe&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Front End Day 26 - A Chat Template&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/xgMNxe/&quot;&gt;Front End Day 26 - A Chat Template&lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
-&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;I hope this helps you please let me know if you have any questions!&lt;/p&gt;</content><category term="codepen" /><category term="material" /><category term="flexbox" /><category term="jquery" /><category term="frontend" /><category term="animation" /><summary type="html">This is a simple messenger template that uses vertical and horizontal flexbox! These are some notes I took from the project.</summary></entry><entry><title type="html">Codepen Floating Action Button</title><link href="http://localhost:4000/2017/02/14/2017-codepen-material-fab-floating-action-button" rel="alternate" type="text/html" title="Codepen Floating Action Button" /><published>2017-02-14T00:00:00-06:00</published><updated>2017-02-14T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/14/2017-codepen-material-fab-floating-action-button</id><content type="html" xml:base="http://localhost:4000/2017/02/14/2017-codepen-material-fab-floating-action-button">&lt;p&gt;This is a pen for a floating action button using CSS. This could be done using the checkbox trick but I felt using JavaScript will make it flow better because the action button already required a bunch of CSS.&lt;/p&gt;
-
-&lt;p data-height=&quot;540&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;qRgEOJ&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;sean_codes&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Front End 25 - Material Design Floating Action Button&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/sean_codes/pen/qRgEOJ/&quot;&gt;Front End 25 - Material Design Floating Action Button&lt;/a&gt; by Sean Codes (&lt;a href=&quot;http://codepen.io/sean_codes&quot;&gt;@sean_codes&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
-&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;I hope this helps you please let me know if you have any questions!&lt;/p&gt;</content><category term="codepen" /><category term="material" /><category term="frontend" /><category term="animation" /><summary type="html">This is a pen for a floating action button using CSS. This could be done using the checkbox trick but I felt using JavaScript will make it flow better because the action button already required a bunch of CSS.</summary></entry></feed>
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content><author><name></name></author><category term="codepen" /><category term="material" /><category term="css" /><category term="coding" /><category term="nojs" /><summary type="html">A Material design FAB burst button. When you click the button it will burst and show the content. These are some notes I took while making this micro app.</summary></entry></feed>

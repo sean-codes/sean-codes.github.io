@@ -10,12 +10,12 @@ layout: default
   <p class="post-content" itemprop="articleBody">
     {{ content }}
   </p>
-  <div class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</div>
+  <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
 </article>
 
 <div class="container" style="margin-top:20px;">
     <div class="relatedPosts">
-        <h5 style="margin-bottom:0px;">Related posts</h5>
+        <h3 style="margin-bottom:0px;">Related posts</h3>
         {% assign maxRelated = 3 %}
         {% assign minCommonTags =  1 %}
         {% assign maxRelatedCounter = 0 %}
@@ -35,7 +35,7 @@ layout: default
 
           {% if sameTagCount >= minCommonTags %}
             <div>
-                <h6><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}{{ commonTags }}</a></h6>
+                <p><a href="{{ site.baseurl }}{{ post.url }}"><b>{{post.type}}: </b>{{ post.title }}{{ commonTags }}</a></p>
             </div>
             {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
             {% if maxRelatedCounter >= maxRelated %}

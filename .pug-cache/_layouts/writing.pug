@@ -1,0 +1,6 @@
+input(type="text" id="search" onkeyup="search()" class="u-full-width" placeholder="Find an article")
+| {% for answer in site.posts %}
+section
+   h5 #[a(class="post-link" href="{{ answer.url | relative_url }}") {{answer.title}}]
+   p {% if answer.from %}#[a(href="https://instagram.com/{{question.from}}") @{{answer.from}}]: {%endif %} #[.excerpt {{answer.excerpt}}]
+| {% endfor %}

@@ -49,7 +49,7 @@ Because when hooked into a database and if you deelte a job in the middle of the
          return index
       }
 
-#Saving and Adding new jobs
+## Saving and Adding new jobs
 When saving or adding a new job when you hit the save button the data is updated and then the entire table that is displayed is refreshed to display the freshly updated data
 
 

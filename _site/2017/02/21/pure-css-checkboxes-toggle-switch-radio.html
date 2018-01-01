@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Toggle switches, radio buttons, and checkbox styles, using only CSS</title>
+  <meta name="description" content="Interesting radio, checkbox, and toggle switches! I just wanted to share with you my notes of making this project">
+  <meta name="msvalidate.01" content="5BD4ED022860A6A7047DE81207423F5F" />
+
+  <link rel="stylesheet" href="/assets/main.css?v=19">
+  <link rel="canonical" href="http://localhost:4000/2017/02/21/pure-css-checkboxes-toggle-switch-radio">
+  <link rel="alternate" type="application/rss+xml" title="Sean Codes" href="/feed.xml">
+  <link rel="shortcut icon" type="image/png" href="/assets/favicon.png" >
+
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91047274-1', 'auto');
+      ga('send', 'pageview');
+</script>
+
+</head>
+
+
+  <body>
+
+    <div class="header">
+  <div class="title"><a class="text" href="/">
+      <h3>SEAN CODES</h3></a><a class="email" href="mailto:sean_codes@outlook.com">sean_codes@outlook.com</a></div>
+  <div class="badgebar"><a class="badge" href="https://www.codepen.io/sean_codes" target="_blank"><img src="/assets/images/codepen.png"/>
+  <p class="label">CodePen</p></a><a class="badge" href="https://www.github.com/sean-codes" target="_blank"><img src="/assets/images/github.png"/>
+  <p class="label">GitHub</p></a><a class="badge" href="https://www.instagram.com/sean_codes" target="_blank"><img src="/assets/images/instagram.png"/>
+  <p class="label">Instagram</p></a><a class="badge" href="https://www.youtube.com/watch?v=HVzMqcwTZr8" target="_blank"><img src="/assets/images/youtube.png"/>
+  <p class="label">YouTube</p></a></div>
+</div>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="container post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 itemprop="name headline">Toggle switches, radio buttons, and checkbox styles, using only CSS</h1>
+  </header>
+  <hr>
+  <p class="post-content" itemprop="articleBody">
+    <p>Interesting radio, checkbox, and toggle switches! I just wanted to share with you my notes of making this project</p>
+
+<h2 id="the-toggle-switch">The toggle switch</h2>
+
+<p>To do the toggle switch I used a <code class="highlighter-rouge">:after</code> and the <code class="highlighter-rouge">+</code> selector! I wrapped the checkbox and label inside a div and created a separate label for displaying the text and the inner is going to draw the display. Hide the input and then use the label to draw the lane and the <code class="highlighter-rouge">after</code> to draw the toggle switch. When the checkbox is checked move the toggle switch using <code class="highlighter-rouge">transform: translateX(45px)</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>div.fancyToggle
+    label(for="toggle2") Toggle
+    div.toggle
+       input(type="checkbox" id="toggle2")
+       label(for="toggle2")
+</code></pre>
+</div>
+
+<h2 id="the-radio-switch">The radio switch</h2>
+
+<p>This one took a bit more trickery and most of it is just guessing numbers to get everything to fit correctly. This requires a wrapper div, and two of each label and input. Hide the radios. Use the wrapper to draw the lane. Then draw each label inside the lane on their sides one with the same color as the lane and the other a primary color when checked. I used <code class="highlighter-rouge">transform:scale()</code> to make the effect!</p>
+
+<h2 id="checkboxes">Checkboxes</h2>
+
+<p>The checkbox did not require a wrapper but I used for positioning. First hide the checkbox. Then draw the label as the square. Then when checked use the <code class="highlighter-rouge">:after</code> selector and draw a inner square with a primary color!</p>
+
+<p>Please take a deeper look at the codepen and let me know if you need any help!</p>
+
+<p data-height="400" data-theme-id="dark" data-slug-hash="ygmNJO" data-default-tab="css,result" data-user="sean_codes" data-embed-version="2" data-pen-title="Front End Day 33 - Fancy Checkbox and Toggle Switches" class="codepen">See the Pen <a href="http://codepen.io/sean_codes/pen/ygmNJO/">Front End Day 33 - Fancy Checkbox and Toggle Switches</a> by Sean Codes (<a href="http://codepen.io/sean_codes">@sean_codes</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+
+  </p>
+  <p class="post-meta"><time datetime="2017-02-21T00:00:00-06:00" itemprop="datePublished">Feb 21, 2017</time></p>
+</article>
+
+<div class="container" style="margin-top:20px;">
+    <div class="relatedPosts">
+        <h3 style="margin-bottom:0px;">Related posts</h3>
+        
+        
+        
+        
+          
+          
+
+          
+
+          
+            <div>
+                <p><a href="/2017/05/22/focus-pointer-events-toggle-trick"><b>Notes: </b>Focus Pointer Events Toggle Trick <span class="label label-default">codepen</span> </a></p>
+            </div>
+            
+            
+          
+        
+          
+          
+
+          
+
+          
+            <div>
+                <p><a href="/2017/03/29/canvas-particle-background-effect"><b>Codepen Notes: </b>Canvas Particle Background Connection <span class="label label-default">codepen</span> </a></p>
+            </div>
+            
+            
+          
+        
+          
+          
+
+          
+
+          
+            <div>
+                <p><a href="/2017/03/26/dynamic-vertical-height-dropdown"><b>Notes: </b>Dynamic Vertical Height Dropdowns <span class="label label-default">codepen</span> </a></p>
+            </div>
+            
+            
+              
+    </div>
+
+    
+</div>
+
+      </div>
+    </main>
+
+    <!-- <footer class="site-footer container">
+  <div class="footer">
+      © 2017 Sean Mann:
+      
+        <a href="https://github.com/sean-codes">Github</a>
+      
+      
+         | <a href="https://codepen.io/sean_codes">Codepen</a>
+      
+      
+        | <a href="https://instagram.com/sean_codes">Instagram</a>
+      
+  </div>
+</footer> -->
+<canvas></canvas>
+<script src="/assets/script.js"></script>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,5 @@
+{% for post in site.posts limit:4 %}
+<div class="space"> 
+  <div><a href="{{ post.url | relative_url}}"><b>{{ post.type }}</b>: {{ post.title }}</a></div>
+  <div><small>{{ post.excerpt }}</small></div>
+</div>{% endfor %}

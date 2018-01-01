@@ -1,0 +1,33 @@
+-
+   var projects = [
+      { 
+         title: 'CS-SOCKETS', 
+         linklabel: 'view source', 
+         href: 'https://github.com/sean-codes/cs-sockets', 
+         img: '/assets/images/project1.png', 
+         description: 'Text based networking server for snappy websocketing in Node.js'
+      },
+      { 
+         title: 'CUBE WARRIOR', 
+         linklabel: 'view source', 
+         href: 'https://sean-codes.github.io/cube-warrior/', 
+         img: '/assets/images/project2.png',
+         description: 'Version 2 of my MMORPG with a new take on game networking'
+      },
+      { 
+         title: 'CS-ENGINE', 
+         linklabel: 'view source', 
+         href: 'https://github.com/sean-codes/cs-engine', 
+         img: '/assets/images/project3.png',
+         description: 'A mobile first responsive game development engine for 2D game'
+      }
+   ]
+
+.projects
+   each project in projects
+      .project
+         img(src=project.img)
+         .info
+            p.title #[b #{project.title}]
+            p=project.description
+            p #[a(target="_blank" href=project.href) #{project.linklabel}]

@@ -1,0 +1,13 @@
+---
+layout: default
+---
+section
+   h4 ABOUT
+   p {{ site.description | escape }}
+section
+   h4 PROJECTS
+   | {% include projects %}
+section
+   h4 WRITING
+   | {% include writing %}
+   a(href="/writing") see more 

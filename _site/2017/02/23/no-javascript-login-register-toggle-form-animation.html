@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Toggle login and register form single page app animation, using only CSS</title>
+  <meta name="description" content="Switching a login and register form with a animation where the first slides out maintaining the front position then forces a lower z-index to slide behind. J...">
+  <meta name="msvalidate.01" content="5BD4ED022860A6A7047DE81207423F5F" />
+
+  <link rel="stylesheet" href="/assets/main.css?v=19">
+  <link rel="canonical" href="http://localhost:4000/2017/02/23/no-javascript-login-register-toggle-form-animation">
+  <link rel="alternate" type="application/rss+xml" title="Sean Codes" href="/feed.xml">
+  <link rel="shortcut icon" type="image/png" href="/assets/favicon.png" >
+
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91047274-1', 'auto');
+      ga('send', 'pageview');
+</script>
+
+</head>
+
+
+  <body>
+
+    <div class="header">
+  <div class="title"><a class="text" href="/">
+      <h3>SEAN CODES</h3></a><a class="email" href="mailto:sean_codes@outlook.com">sean_codes@outlook.com</a></div>
+  <div class="badgebar"><a class="badge" href="https://www.codepen.io/sean_codes" target="_blank"><img src="/assets/images/codepen.png"/>
+  <p class="label">CodePen</p></a><a class="badge" href="https://www.github.com/sean-codes" target="_blank"><img src="/assets/images/github.png"/>
+  <p class="label">GitHub</p></a><a class="badge" href="https://www.instagram.com/sean_codes" target="_blank"><img src="/assets/images/instagram.png"/>
+  <p class="label">Instagram</p></a><a class="badge" href="https://www.youtube.com/watch?v=HVzMqcwTZr8" target="_blank"><img src="/assets/images/youtube.png"/>
+  <p class="label">YouTube</p></a></div>
+</div>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="container post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 itemprop="name headline">Toggle login and register form single page app animation, using only CSS</h1>
+  </header>
+  <hr>
+  <p class="post-content" itemprop="articleBody">
+    <p>Switching a login and register form with a animation where the first slides out maintaining the front position then forces a lower z-index to slide behind. Just vanilla CSS. These are my notes on the project:</p>
+
+<h2 id="the-basics">The basics</h2>
+<p>To do this switch I’m using two divs and two radios. To start I set the divs with a min-height and max-width and <code class="highlighter-rouge">margin:auto</code>. I create two animations for <code class="highlighter-rouge">slideIn</code> and <code class="highlighter-rouge">slideOut</code>.
+When I have an input checked I use the slidein animation and use the slideout animation on the non checked.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>input.login + div,
+input.register + div{
+  transform:translateX(0px);
+  animation: 1s slideout;
+  z-index: 1;
+}
+
+input.login:checked + div,
+input.register:checked + div{
+  transform:translateX(0px);
+  animation: 1s slidein;
+  z-index:0;
+}
+
+ @keyframes moveout{
+   0%, 100%{ transform:translateX(0px); }
+   50%{ transform:translateX(-160px); }
+}
+
+@keyframes movein{
+   0%, 100%{transform:translateX(0px); }
+   50%{ transform:translateX(160px); }
+}
+</code></pre>
+</div>
+
+<h2 id="the-interesting-trick">The interesting trick</h2>
+<p>When I was makign this I could not find any information on swapping z-index in the animation and holding it without causing a flash when the z-index switched at first. To fix this I used an <code class="highlighter-rouge">animation-delay</code> and set the z-index after the animation was halfway through!</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/* Inside the slide in add these */
+input.login:checked + div,
+input.register:checked + div{
+  animation: 1s slidein, 2s forceTop infinite;
+  animation-delay: 0s, 0.5s;
+}
+
+@keyframes forceTop{
+  from, to{z-index:2; }
+}
+</code></pre>
+</div>
+
+<h2 id="the-extras">The extras</h2>
+<p>I also added labels and opacity/background changing! I think if you are able to master the top section of this and get the slides functioning you should be able to add those features. The basics for those features revolve around the <code class="highlighter-rouge">+</code> selector. I sometimes select through multiple elements using it like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>input.login:checked + label + .form{
+  /* Do something to the form inside this div! */
+}
+</code></pre>
+</div>
+
+<p>Please take a deeper look at the codepen and let me know if you need any help!</p>
+
+<p data-height="600" data-theme-id="dark" data-slug-hash="PpoOzr" data-default-tab="css,result" data-user="sean_codes" data-embed-version="2" data-pen-title="Front End Day - 35 - No JS Login Register toggle" class="codepen">See the Pen <a href="http://codepen.io/sean_codes/pen/PpoOzr/">Front End Day - 35 - No JS Login Register toggle</a> by Sean Codes (<a href="http://codepen.io/sean_codes">@sean_codes</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+
+  </p>
+  <p class="post-meta"><time datetime="2017-02-23T00:00:00-06:00" itemprop="datePublished">Feb 23, 2017</time></p>
+</article>
+
+<div class="container" style="margin-top:20px;">
+    <div class="relatedPosts">
+        <h3 style="margin-bottom:0px;">Related posts</h3>
+        
+        
+        
+        
+          
+          
+
+          
+
+          
+            <div>
+                <p><a href="/2017/05/22/focus-pointer-events-toggle-trick"><b>Notes: </b>Focus Pointer Events Toggle Trick <span class="label label-default">codepen</span> </a></p>
+            </div>
+            
+            
+          
+        
+          
+          
+
+          
+
+          
+            <div>
+                <p><a href="/2017/03/29/canvas-particle-background-effect"><b>Codepen Notes: </b>Canvas Particle Background Connection <span class="label label-default">codepen</span> </a></p>
+            </div>
+            
+            
+          
+        
+          
+          
+
+          
+
+          
+            <div>
+                <p><a href="/2017/03/26/dynamic-vertical-height-dropdown"><b>Notes: </b>Dynamic Vertical Height Dropdowns <span class="label label-default">codepen</span> </a></p>
+            </div>
+            
+            
+              
+    </div>
+
+    
+</div>
+
+      </div>
+    </main>
+
+    <!-- <footer class="site-footer container">
+  <div class="footer">
+      © 2017 Sean Mann:
+      
+        <a href="https://github.com/sean-codes">Github</a>
+      
+      
+         | <a href="https://codepen.io/sean_codes">Codepen</a>
+      
+      
+        | <a href="https://instagram.com/sean_codes">Instagram</a>
+      
+  </div>
+</footer> -->
+<canvas></canvas>
+<script src="/assets/script.js"></script>
+
+
+  </body>
+
+</html>

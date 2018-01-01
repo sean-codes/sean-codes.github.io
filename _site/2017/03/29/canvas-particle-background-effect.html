@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Canvas Particle Background Connection</title>
+  <meta name="description" content="Some notes on creating a particle connection effect!">
+  <meta name="msvalidate.01" content="5BD4ED022860A6A7047DE81207423F5F" />
+
+  <link rel="stylesheet" href="/assets/main.css?v=19">
+  <link rel="canonical" href="http://localhost:4000/2017/03/29/canvas-particle-background-effect">
+  <link rel="alternate" type="application/rss+xml" title="Sean Codes" href="/feed.xml">
+  <link rel="shortcut icon" type="image/png" href="/assets/favicon.png" >
+
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91047274-1', 'auto');
+      ga('send', 'pageview');
+</script>
+
+</head>
+
+
+  <body>
+
+    <div class="header">
+  <div class="title"><a class="text" href="/">
+      <h3>SEAN CODES</h3></a><a class="email" href="mailto:sean_codes@outlook.com">sean_codes@outlook.com</a></div>
+  <div class="badgebar"><a class="badge" href="https://www.codepen.io/sean_codes" target="_blank"><img src="/assets/images/codepen.png"/>
+  <p class="label">CodePen</p></a><a class="badge" href="https://www.github.com/sean-codes" target="_blank"><img src="/assets/images/github.png"/>
+  <p class="label">GitHub</p></a><a class="badge" href="https://www.instagram.com/sean_codes" target="_blank"><img src="/assets/images/instagram.png"/>
+  <p class="label">Instagram</p></a><a class="badge" href="https://www.youtube.com/watch?v=HVzMqcwTZr8" target="_blank"><img src="/assets/images/youtube.png"/>
+  <p class="label">YouTube</p></a></div>
+</div>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="container post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 itemprop="name headline">Canvas Particle Background Connection</h1>
+  </header>
+  <hr>
+  <p class="post-content" itemprop="articleBody">
+    <p>Some notes on creating a particle connection effect!</p>
+
+<p data-height="400" data-theme-id="dark" data-slug-hash="OpoQEp" data-default-tab="js,result" data-user="sean_codes" data-embed-version="2" data-pen-title="Front End Canvas Particle Connection" class="codepen">See the Pen <a href="http://codepen.io/sean_codes/pen/OpoQEp/">Front End Canvas Particle Connection</a> by Sean Codes (<a href="http://codepen.io/sean_codes">@sean_codes</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<h2 id="how-this-works">How this works</h2>
+<p>To do this effect we will create a set number of particles. Each with a speed, position, and size. Then we will move them on that speed using <code class="highlighter-rouge">requestAnimationFrame</code>. Inside that movement we will also check the distance from all the other points! If the distance is short enough we will draw a line from each particles x,y coordiantes!</p>
+
+<h2 id="the-html">The html</h2>
+<p>All we need is a canvas element!</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;canvas&gt;&lt;/canvas&gt;
+</code></pre>
+</div>
+
+<h2 id="setup-the-javascript">Setup the javascript</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var canvas = document.querySelector('canvas')
+var body = document.querySelector('body')
+canvas.width = body.offsetWidth
+canvas.height = body.offsetHeight
+var ctx = canvas.getContext('2d')
+var particleCount = 100
+</code></pre>
+</div>
+
+<h2 id="creating-the-particles">Creating the particles</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>partCnt = 100;
+var particles = []
+for(var i = 0; i &lt; partCnt; i++){
+   particles[i] = {
+      x: random_range(0, canvas.width),
+      y: random_range(0, canvas.height),
+      xSpeed: random_range(-2, 2),
+      ySpeed: random_range(-2, 2),
+      size: random_range(1, 10),
+      range: random_range(10, 75)
+   }
+}
+</code></pre>
+</div>
+
+<h2 id="the-random_range-function">The random_range function</h2>
+<p>Just incase you’re not bringing your own! :]</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>function random_range(min, max){
+   return Math.round(min + Math.random() * (max-min))
+}
+</code></pre>
+</div>
+
+<h2 id="part1-drawing-and-moving-the-particles">PART1: Drawing and moving the particles</h2>
+<p>We create a draw function. Then we will use <code class="highlighter-rouge">fillRect</code> to draw the particles. Also call the <code class="highlighter-rouge">check_points</code> function we will create below!</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>requestAnimationFrame(draw)
+function draw(){
+   requestAnimationFrame(draw)
+   ctx.fillStyle = '#222'
+   ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+   //Loop each particle
+   for(var i = 0; i &lt; partCnt; i++){
+
+      //Draw the particle
+      particles[i].x += particles[i].xSpeed;
+      particles[i].y += particles[i].ySpeed;
+      ctx.fillStyle = "#555"
+      ctx.fillRect(particles[i].x,particles[i].y,particles[i].size,particles[i].size)
+
+      //How we will draw the lines
+      check_points(particles[i].x, particles[i].y, particles[i].size, particles[i].range)
+
+      //This will flip the particles across if they go out of bounds!
+      if(particles[i].x &gt; canvas.width)
+         particles[i].x = 0
+      if(particles[i].x &lt; 0)
+         particles[i].x = canvas.width
+      if(particles[i].y &gt; canvas.height)
+         particles[i].y = 0
+      if(particles[i].y &lt; 0)
+         particles[i].y = canvas.height
+   }
+}
+</code></pre>
+</div>
+
+<h2 id="part2-drawing-the-lines">PART2: Drawing the lines</h2>
+<p>This will do a distance calculation on each particle to see if we are within range of another particles. If we are then draw a line between them.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>function check_points(x, y, size, range){
+   for(var i = 0; i &lt; partCnt; i++){
+      if(distance(x, y, particles[i].x, particles[i].y) &lt; range){
+         ctx.beginPath()
+         ctx.moveTo(x+size/2,y+size/2)
+         ctx.lineTo(particles[i].x+particles[i].size/2,particles[i].y+particles[i].size/2)
+         ctx.strokeStyle = "#991100"
+         ctx.stroke()
+      }
+   }
+}
+</code></pre>
+</div>
+
+<h2 id="part3-the-distance-function">PART3: the distance function</h2>
+<p>Again if you did not bring your own!</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>function distance(x1, y1, x2, y2){
+   return Math.sqrt(Math.pow((x2 - x1),2) + Math.pow((y2 - y1),2) )
+}
+</code></pre>
+</div>
+
+  </p>
+  <p class="post-meta"><time datetime="2017-03-29T00:00:00-05:00" itemprop="datePublished">Mar 29, 2017</time></p>
+</article>
+
+<div class="container" style="margin-top:20px;">
+    <div class="relatedPosts">
+        <h3 style="margin-bottom:0px;">Related posts</h3>
+        
+        
+        
+        
+          
+          
+
+          
+
+          
+            <div>
+                <p><a href="/2017/05/22/focus-pointer-events-toggle-trick"><b>Notes: </b>Focus Pointer Events Toggle Trick <span class="label label-default">codepen</span>  <span class="label label-default">title</span>  <span class="label label-default">javascript</span>  <span class="label label-default">title</span>  <span class="label label-default">frontend</span> </a></p>
+            </div>
+            
+            
+          
+        
+          
+          
+
+          
+
+          
+        
+          
+          
+
+          
+
+          
+            <div>
+                <p><a href="/2017/03/26/dynamic-vertical-height-dropdown"><b>Notes: </b>Dynamic Vertical Height Dropdowns <span class="label label-default">codepen</span>  <span class="label label-default">title</span>  <span class="label label-default">javascript</span>  <span class="label label-default">title</span>  <span class="label label-default">frontend</span> </a></p>
+            </div>
+            
+            
+          
+        
+          
+          
+
+          
+
+          
+            <div>
+                <p><a href="/2017/03/04/psuedo-button-border-transition-animations"><b>Codepen daily 41: </b>Button Border Animations <span class="label label-default">codepen</span>  <span class="label label-default">title</span>  <span class="label label-default">javascript</span>  <span class="label label-default">title</span>  <span class="label label-default">frontend</span> </a></p>
+            </div>
+            
+            
+              
+    </div>
+
+    
+</div>
+
+      </div>
+    </main>
+
+    <!-- <footer class="site-footer container">
+  <div class="footer">
+      © 2017 Sean Mann:
+      
+        <a href="https://github.com/sean-codes">Github</a>
+      
+      
+         | <a href="https://codepen.io/sean_codes">Codepen</a>
+      
+      
+        | <a href="https://instagram.com/sean_codes">Instagram</a>
+      
+  </div>
+</footer> -->
+<canvas></canvas>
+<script src="/assets/script.js"></script>
+
+
+  </body>
+
+</html>

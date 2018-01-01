@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<input type="text" id="search" onkeyup="search()" class="u-full-width" placeholder="Find a post" autocomplete="off">
+<div style="text-align:right;"><small>Count: <span id="searchCount">{{site.posts.size}}</span></small></div>
+{% for answer in site.posts %}
+<section class="writing">
+   <h4 class="writingTitle"><a class="post-link" href="{{ answer.url | relative_url }}">{{answer.title}}</a></h4>
+   <p class="writingExcerpt">{% if answer.from %}<a href="https://instagram.com/{{question.from}}">@{{answer.from}}</a> :{%endif %} {{answer.excerpt | remove: '<p>' | remove: '</p>'}}</p>
+</section>
+{% endfor %}
