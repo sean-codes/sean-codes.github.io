@@ -1,5 +1,0 @@
-| {% for post in site.posts limit:4 %}
-div.space 
-   div #[a(href="{{ post.url | relative_url}}") #[b {{ post.type }}]: {{ post.title }}]
-   div #[small {{ post.excerpt }}]
-| {% endfor %}
