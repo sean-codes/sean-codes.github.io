@@ -1,3 +1,9 @@
+// Import partials.
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+$font-color: #222;
+
 // Reset
 html {
   font-size: 62.5%; }
@@ -160,9 +166,12 @@ code {
   white-space: nowrap;
   background: rgba(0, 0, 0, 0.1);
   color:#000;
-  border-radius: 3px; }
+  border-radius: 3px;
+   }
 pre > code {
   display: block;
   padding: 1rem 1.5rem;
   white-space: pre;
-  margin: 1rem 0rem; }
+  margin: 1rem 0rem;
+  overflow:auto;
+}
