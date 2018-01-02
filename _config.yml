@@ -36,4 +36,3 @@ exclude:
   - Gemfile.lock
 plugins_dir:
    - jekyll-autoprefixer
-   - jekyll-pug
