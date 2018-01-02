@@ -64,7 +64,6 @@ var background = function(info){
          this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
          this.timer -= 1;
          if(this.timer < 0){
-            console.log('new')
             this.createPoint(this.canvas.width+500);
             this.timer = 30;
             this.points.shift();
@@ -108,7 +107,7 @@ var background = function(info){
          this.ctx.beginPath()
          this.ctx.moveTo(points.p1.x,points.p1.y)
          this.ctx.lineTo(points.p2.x,points.p2.y)
-         this.ctx.strokeStyle = 'rgba(0, 0, 0, 0.15)';
+         this.ctx.strokeStyle = 'rgba(0, 0, 0, 0.1)';
          this.ctx.stroke()
       }
    }
