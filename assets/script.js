@@ -115,7 +115,4 @@ var background = function(info){
 
    obj.init(info); return obj;
 }
-document.body.onresize = function() {
-   background()
-}
 background()
