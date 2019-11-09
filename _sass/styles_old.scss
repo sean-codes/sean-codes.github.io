@@ -1,0 +1,177 @@
+// Import partials.
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+$font-color: #222;
+
+// Reset
+html {
+  font-size: 62.5%; }
+body, body * {
+   font-family:$font-family-sans-serif;
+   background:none;
+   border:none;
+   padding:0;
+   margin:0;
+   font-weight:300;
+   font-size: 1.5rem; /* 1rem = 10px */
+   font-weight: 400;
+   color: #222;
+   text-decoration: none;
+   box-sizing:border-box;
+   line-height:1.6rem;
+}
+
+body {
+   background: #FFF;
+   max-width:800px;
+   margin:40px auto;
+   padding:0px 2rem;
+}
+
+hr {
+   border-top:1px solid #333;
+   width:100%;
+   margin:1rem 0;
+}
+
+// Typography
+b { font-weight: 600; }
+h1, h2, h3, h4, h5, h6 { font-weight: 300; margin-top:1.5rem; margin-bottom:0.5rem; }
+h1 { font-size: 4.0rem; font-weight:600; line-height: 1.2; letter-spacing: -.1rem;}
+h2 { font-size: 3.6rem; font-weight:600; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 3.0rem; font-weight:600; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 2.4rem; font-weight:600; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 1.8rem; font-weight:600; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.5rem; font-weight:600; line-height: 1.6;  letter-spacing: 0; }
+p { font-size: 1.5rem; line-height: 1.6; font-weight: 300; }
+a:hover { text-decoration: underline; cursor: pointer; }
+small { font-size: 1.25rem; }
+h2 small { font-size: 1.5rem; color: rgba(0, 0, 0, 0.75); }
+ul { list-style: circle; }
+ul li { margin-left:1.75rem; margin-bottom: 0.5rem; &:last-of-type{ margin-bottom: 0; }}
+.center { text-align:center; }
+.space { margin-bottom: 1rem; &:last-of-type { margin-bottom: 0; }}
+// Spacing
+section {
+   margin-bottom: 2rem;
+}
+
+//Inputs
+input[type="text"]{
+   width:100%;
+   height:4rem;
+   padding:1rem;
+   border:1px solid rgba(0, 0, 0, 0.5);
+   border-radius:3px;
+}
+
+// Header
+.header {
+   display:flex;
+   flex-wrap: wrap;
+   flex-wrap:wrap;
+   margin-bottom:2rem;
+   .title{
+      flex: 1;
+      h3 {
+         margin: 0
+      }
+      .email {
+
+      }
+   }
+   .badgebar{
+      text-align:right;
+      display:flex;
+      flex-wrap:wrap;
+      // Badges
+      .badge {
+         flex: 1;
+         margin-left:1.5rem;
+         text-align:center;
+         img{
+            width:3rem;
+            height:3rem;
+            opacity:0.9;
+         }
+      }
+   }
+}
+@media (max-width: 600px) {
+   .header {
+      .title {
+         text-align:center;
+      }
+      .badgebar {
+         margin-top:2rem;
+         min-width:100%;
+         overflow:auto;
+         text-align:center;
+         .badge { margin-left: 0rem; }
+      }
+   }
+}
+
+// Projects
+@media (max-width: 600px) {
+   .projects {
+      .project{
+         display:flex;
+         margin-bottom:1rem;
+         &:last-of-type { margin-bottom:0; }
+         img{ display:none; }
+         .info {
+            flex: 1;
+         }
+      }
+   }
+}
+// Three in row
+@media (min-width: 600px) {
+   .projects{
+      display:flex;
+      margin-top:0.6rem;
+      flex-wrap: wrap;
+      .project {
+         flex:1;
+         margin-left:3rem;
+         &:first-of-type { margin-left: 0; }
+         img {
+            border-radius:4px;
+            width:100%;
+         }
+      }
+   }
+}
+
+canvas {
+   pointer-events:none;
+   height:100%;
+   width:100%;
+   position:fixed;
+   top:0px;
+   left:0px;
+   z-index:-1;
+}
+
+.excerpt p {
+   display:inline-block;
+}
+
+code {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  font-size: 90%;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.1);
+  color:#000;
+  border-radius: 3px;
+   }
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre;
+  margin: 1rem 0rem;
+  overflow:auto;
+}

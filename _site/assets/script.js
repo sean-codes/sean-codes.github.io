@@ -107,7 +107,7 @@ var background = function(info){
          this.ctx.beginPath()
          this.ctx.moveTo(points.p1.x,points.p1.y)
          this.ctx.lineTo(points.p2.x,points.p2.y)
-         this.ctx.strokeStyle = 'rgba(0, 0, 0, 0.1)';
+         this.ctx.strokeStyle = 'rgba(0, 0, 0, 0.25)';
          this.ctx.stroke()
       }
    }

@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<section>
+   <h4>ABOUT</h4>
+   <p> {{ site.description | escape }}</p>
+</section>
+<section>
+   <h4>PROJECTS</h4>
+   {% include projects.html %}
+</section>
+<section>
+   <h4>WRITING</h4>
+   {% include writing.html %}
+   <p> <a href="/writing">see more</a></p>
+</section>
