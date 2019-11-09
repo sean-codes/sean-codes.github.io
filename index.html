@@ -1,0 +1,90 @@
+
+<!doctype html>
+<html lang="en" style="background: #FFF;">
+   <head>
+      <title>Sean Codes</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="a developer">
+      <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Josefin+Slab:600&amp;display=swap"></link> -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400&display=swap" rel="stylesheet">
+      <style>
+         html {
+            font-family: 'Roboto Slab', serif;
+            -webkit-font-smoothing: antialiased;
+            /* Evan You <3 */
+            font-size: calc(12px + 0.35vw);
+         }
+
+         body {
+            padding: 0;
+            margin: 0;
+            color: #222;
+            padding: 5vw 10vw;
+            max-width: 30rem;
+            filter: blur(10px);
+            animation: 0.5s in forwards;
+         }
+
+         .image-in-the-top-right {
+            width: 6rem;
+            height: 6rem;
+            background: #222;
+            border-radius: 100%;
+            float:left;
+         }
+
+         h1 {
+            height: 6rem;
+            line-height: 6rem;
+            padding-left: 1rem;
+            font-size: calc(2rem + 0.6vw);
+            font-weight: 700;
+            white-space: nowrap;
+            margin: 0;
+            position: relative;
+            display: inline-block;
+         }
+
+         /* blinking cursor */
+         h1:after {
+            content: '';
+            position: absolute;
+            right:-1rem;
+            height: 2.5rem;
+            bottom: 1.9rem;
+            width: 0.5rem;
+            background: #222;
+            animation: blink 1s infinite;
+         }
+
+         p {
+            margin: 1rem 0;
+            font-size: 1.25rem;
+         }
+
+         a {
+            color: #9255e4;
+         }
+
+         @keyframes blink {
+            0% { opacity: 0 }
+            to { opacity: 1 }
+         }
+
+         @keyframes in {
+            0% { filter: blur(10px) }
+            to { filter: blur(0) }
+         }
+      </style>
+   </head>
+   <body>
+      <img style="" class="image-in-the-top-right" src="./a_picture_of_me.jpg" alt="a picture of me"/>
+      <h1>Sean Codes</h1>
+      <p>Hi! I am a software developer in Chicago on an adventure exploring web technology.</p>
+      <p>You can find me building projects on <a target="_blink" rel="noreferrer" href="https://codepen.io/sean_codes">codepen</a> and sharing code for tools, plugins, and other experiments on <a rel="noreferrer" target="_blank" href="https://github.com/sean-codes">github</a>.</p>
+      <p>Along the way I take pictures of my computer and share my story on <a rel="noreferrer" target="_blank" href="https://instagram.com/sean_codes">instagram</a>.</p>
+      <p>When not writing code I like jumping ramps on my bicycle, playing video games, and hanging out with my cat Criminal.</p>
+      <p>Meow, thanks for visiting!</p>
+      <img style="width: 30rem; max-width: 100%; height: auto; background: #222;" src="./a_picture_of_criminal.jpg"  alt="a picture of criminal the cat"/>
+   </body>
+</html>
