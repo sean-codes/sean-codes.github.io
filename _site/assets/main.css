@@ -22,12 +22,12 @@ body {
   height: 6rem;
   background: #222;
   border-radius: 100%;
-  float: left; }
+  float: left;
+  margin-right: 1rem; }
 
 h1 {
   height: 6rem;
   line-height: 6rem;
-  padding-left: 1rem;
   font-size: calc(2rem + 0.6vw);
   font-weight: 700;
   white-space: nowrap;
