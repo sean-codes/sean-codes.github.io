@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+
+html {
+    font-family: 'Roboto Slab', serif;
+    -webkit-font-smoothing: antialiased;
+    /* Evan You <3 */
+    font-size: calc(12px + 0.35vw);
+    background: #FFF;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    color: #222;
+    padding: 5vw 10vw;
+    max-width: 30rem;
+    filter: blur(10px);
+    animation: 0.5s in forwards;
+}
+
+.image-in-the-top-right {
+    width: 6rem;
+    height: 6rem;
+    background: #222;
+    border-radius: 100%;
+    float: left;
+    margin-right: 1rem;
+}
+
+h1 {
+    height: 6rem;
+    line-height: 6rem;
+    font-size: calc(2rem + 0.6vw);
+    font-weight: 700;
+    white-space: nowrap;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+/* blinking cursor */
+h1:after {
+    content: '';
+    position: absolute;
+    right: -1rem;
+    height: 2.5rem;
+    bottom: 1.85rem;
+    width: 0.4rem;
+    background: #222;
+    animation: blink 1s infinite;
+}
+
+p {
+    margin: 1rem 0;
+    font-size: 1.25rem;
+}
+
+a {
+    color: #9255e4;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes in {
+    0% {
+        filter: blur(10px)
+    }
+
+    to {
+        filter: blur(0)
+    }
+}

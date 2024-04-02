@@ -1,7 +1,3 @@
-## A site with a description
-[https://sean-codes.github.io](https://sean-codes.github.io)
+front-page
 
-## how to run
-```shell
-bundle exec jekyll serve
-```
+https://sean-codes.github.io/
